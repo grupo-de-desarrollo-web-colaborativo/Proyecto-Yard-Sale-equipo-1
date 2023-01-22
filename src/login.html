@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Login</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="w-full h-screen grid place-items-center">
+      <div class="grid grid-rows-1 w-80 justify-items-center">
+        <img
+          src="../logos/logo_yard_sale.svg"
+          alt="logo"
+          class="w-40 mb-12 justify-self-center"
+        />
+
+        <form action="/" class="flex flex-col w-80">
+          <label for="email-address" class="font-sans text-sm font-bold mb-1"
+            >Email address</label
+          >
+          <input
+            type="text"
+            id="email-address"
+            placeholder="camilayokoo@gamil.com"
+            class="bg-xtal-green-tifield border-none rounded-lg text-base p-2 mb-3"
+          />
+
+          <label for="password" class="font-sans text-sm font-bold mb-1"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            placeholder="*********"
+            class="bg-xtal-green-tifield border-none rounded-lg text-base p-2 mb-3"
+          />
+
+          <input
+            type="submit"
+            value="Login"
+            class="bg-xtal-green rounded-lg border-none text-xtal-green-white w-full cursor-pointer text-base font-bold h-12 my-8"
+          />
+        </form>
+        <p class="text-sm max-sm:text-sm max-sm:mb-32">
+          <a class="text-xtal-green" href="/">Forgot my password</a>
+        </p>
+        <button
+          class="rounded-lg border-solid border-xtal-green border-2 text-xtal-green w-full cursor-pointer text-sm font-bold h-12 my-8"
+        >
+          Sign up
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
