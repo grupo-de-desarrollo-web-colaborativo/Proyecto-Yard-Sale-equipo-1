@@ -1,0 +1,137 @@
+    /*ordenar los estilos
+      1.Posicionamiento
+      2.Modelo de caja
+      3.Tipografía
+      4.Visuales
+      5.Otros
+  */
+  
+  :root {
+    --Hospital-green: #ACD9B2;
+    --very-light-pink: #C7C7C7;
+    --Text-input-field: #F7F7F7;
+    --white: #FFFFFF;
+    --dark: #232830;
+    --black: #000000;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .login .form-container {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: max-content max-content auto;
+    height: 100%;
+    padding: 20px 18px;
+  }
+
+  .form-container .login__close {
+    justify-self: end;
+    height: 15px;
+    width: 15px;
+  }
+
+  .form-container .login__logo {
+    justify-self: center;
+    margin-top: 80px;
+    width: 200px;
+    height: 36px;
+  }
+
+  .form-container .login-form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 36px auto 0;
+  }
+
+  .login-form__label-email,
+  .login-form__label-password {
+    max-width: 340px;
+    margin: 0 0 6px 0;
+    font-size: var(--sm);
+    font-weight: 700;
+  }
+  
+  .login-form__input-email,
+  .login-form__input-password {
+    min-width: 284px;
+    max-width: 340px;
+    height: 42px;
+    margin-bottom: 24px;
+    padding: 10px 8px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 10px;
+    background-color: var(--Text-input-field);
+  }
+
+  .login-form__input-password {
+    margin-bottom: 42px;
+  }
+  
+  .primary-button {
+    width: 100%;
+    max-width: 340px;
+    height: 60px;
+    font-size: var(--md);
+    border-radius: 10px;
+    color: var(--Text-input-field);
+    border: 1px solid var(--Hospital-green);
+    background-color: var(--Hospital-green);
+  }
+
+  .login__forgot-password {
+    text-align: center;
+    margin: 30px 0 48px;
+    font-size: var(--sm);
+    font-weight: 500;
+    color: var(--Hospital-green);
+    text-decoration: none;
+  }
+
+  .primary-button--white-background {
+    align-self: end;
+    width: 284px;
+    color: var(--Hospital-green);
+    background-color: var(--white);
+  }
+
+  @media (min-width: 769px) {
+    .login__close,
+    .login__logo {
+      display: none;
+    }
+
+    .login .form-container {
+      height: 100%;
+      align-content: center;
+    }
+
+
+    .login .login-form {
+      width: 340px;
+      margin-top: 0;
+    }
+
+    .form-container .primary-button--white-background{
+      width: 340px;
+    }
+
+  }
