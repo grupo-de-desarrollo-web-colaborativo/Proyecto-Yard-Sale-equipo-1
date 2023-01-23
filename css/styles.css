@@ -1,0 +1,200 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --color-primary: #acd9b2;
+  --color-primary-10: #e7e7e7;
+  --color-seconday: #ffffff;
+  --color-text: #797979;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 114px;
+  /* min-height: 100vh; */
+}
+
+.logo {
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 341px;
+  }
+}
+
+.form__group {
+  margin-bottom: 24px;
+}
+
+.form__group label {
+  font-weight: bold;
+}
+
+.form__group input {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 42px;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: var(--color-seconday);
+  padding: 18px 119px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 18px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.form__forgot {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form__forgot a {
+  padding: 0;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form__sign {
+  margin-top: 154px;
+}
+
+@media (min-width: 768px) {
+  .form__sign {
+    margin-top: 60px;
+  }
+}
+
+.form__sign a {
+  padding: 18px 110px;
+}
+
+.btn--transparent {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* Password */
+.content-pass {
+  text-align: center;
+  margin-top: 4.625rem;
+  font-size: 18px;
+}
+
+.content-pass__subtitle {
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+.content-pass__info {
+  padding: 0 55px;
+  font-weight: normal;
+}
+
+.form__group--email {
+  margin-top: 55px;
+}
