@@ -6,132 +6,97 @@
       5.Otros
   */
   
-  :root {
-    --Hospital-green: #ACD9B2;
-    --very-light-pink: #C7C7C7;
-    --Text-input-field: #F7F7F7;
-    --white: #FFFFFF;
-    --dark: #232830;
-    --black: #000000;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 18px;
-  }
+:root {
+  --Hospital-green: #ACD9B2;
+  --very-light-pink: #C7C7C7;
+  --Text-input-field: #F7F7F7;
+  --white: #FFFFFF;
+  --dark: #232830;
+  --black: #000000;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Quicksand', sans-serif;
-  }
-
-  .login {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+    
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 17px;
+}
+/* principal container main */
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* nav */
+#nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0468);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 13px 0;
+}
+  /* set box size and general parameters */
+  .menu-burger{
+    width: 25px;
+    height: 19px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    border: none;
+    background: transparent;
+    gap: 5px;
+    padding: 2px;
+  }
+  /* set burger lines general parameters */
+  .menu-burger > div{
+    width: 23px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 2px;
+  }
+  /* change middle burger line */
+  #shorter-line{
+    width: 11px;
+  }
+/* form */
+.form{
+  
+}
+  .form h1{
+    margin-top: 21px;
   }
 
-  .login .form-container {
-    display: grid;
-    justify-items: center;
-    grid-auto-rows: max-content max-content auto;
-    height: 100%;
-    padding: 20px 18px;
-  }
-
-  .form-container .login__close {
-    justify-self: end;
-    height: 15px;
-    width: 15px;
-  }
-
-  .form-container .login__logo {
-    justify-self: center;
-    margin-top: 80px;
-    width: 200px;
-    height: 36px;
-  }
-
-  .form-container .login-form {
+/* botton button */
+  .submit-button{
     display: flex;
-    flex-direction: column;
-    width: max-content;
-    margin: 36px auto 0;
+    margin-bottom: 22px;
   }
-
-  .login-form__label-email,
-  .login-form__label-password {
-    max-width: 340px;
-    margin: 0 0 6px 0;
-    font-size: var(--sm);
-    font-weight: 700;
-  }
-  
-  .login-form__input-email,
-  .login-form__input-password {
-    min-width: 284px;
-    max-width: 340px;
-    height: 42px;
-    margin-bottom: 24px;
-    padding: 10px 8px;
-    border: 1px solid var(--very-light-pink);
-    border-radius: 10px;
-    background-color: var(--Text-input-field);
-  }
-
-  .login-form__input-password {
-    margin-bottom: 42px;
-  }
-  
-  .primary-button {
-    width: 100%;
-    max-width: 340px;
-    height: 60px;
-    font-size: var(--md);
-    border-radius: 10px;
-    color: var(--Text-input-field);
-    border: 1px solid var(--Hospital-green);
-    background-color: var(--Hospital-green);
-  }
-
-  .login__forgot-password {
-    text-align: center;
-    margin: 30px 0 48px;
-    font-size: var(--sm);
-    font-weight: 500;
-    color: var(--Hospital-green);
-    text-decoration: none;
-  }
-
-  .primary-button--white-background {
-    align-self: end;
-    width: 284px;
-    color: var(--Hospital-green);
-    background-color: var(--white);
-  }
-
-  @media (min-width: 769px) {
-    .login__close,
-    .login__logo {
-      display: none;
+    .submit-button a{
+      display: inline-block;
+      width: 339px;
+      height: 59px;
+      background-color: var(--Hospital-green);
+      border: none;
+      border-radius: 10px;
+      color: var(--Text-input-field);
+      text-decoration: none;
+      margin: auto;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
     }
-
-    .login .form-container {
-      height: 100%;
-      align-content: center;
-    }
-
-
-    .login .login-form {
-      width: 340px;
-      margin-top: 0;
-    }
-
-    .form-container .primary-button--white-background{
-      width: 340px;
-    }
-
-  }
