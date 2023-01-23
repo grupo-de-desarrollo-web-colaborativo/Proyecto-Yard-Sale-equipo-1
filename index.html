@@ -11,27 +11,48 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="login">
-      <div class="logo">
-        <img src="./images/logo_yard_sale.svg" alt="" />
+    <!-- Header -->
+    <header class="header">
+      <img class="header__image" src="./assets/images/logo_yard_sale.svg" alt="company logo" />
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link btn-link btn--transparent" href="#">All</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Clothes</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Electronics</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Furniture</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Toys</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Others</a></li>
+        </ul>
+      </nav>
+      <div class="sign-car">
+        <a href="">Sign in</a>
+        <img src="./assets/images/icon_shopping_cart_notification.svg" alt="" width="29.5" height="27" />
       </div>
-      <form id="formulario" class="form container">
-        <div class="form__group">
-          <label for="email">Email adress</label>
-          <input type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="login">
+        <div class="logo">
+          <img src="./assets/images/logo_yard_sale.svg" alt="" />
         </div>
-        <div class="form__group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="*******" />
-        </div>
-        <input class="btn" type="submit" value="Log in" />
-        <div class="form__forgot">
-          <a href="./pass.html">Forgot my password</a>
-        </div>
-        <div class="form__sign">
-          <a class="btn btn--transparent" href="#">Sign up</a>
-        </div>
-      </form>
-    </div>
+        <form id="formulario" class="form container">
+          <div class="form__group">
+            <label for="email">Email adress</label>
+            <input type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
+          </div>
+          <div class="form__group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="*******" />
+          </div>
+          <input class="btn" type="submit" value="Log in" />
+          <div class="form__forgot">
+            <a href="./pass.html">Forgot my password</a>
+          </div>
+          <div class="form__sign">
+            <a class="btn btn--transparent" href="#">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

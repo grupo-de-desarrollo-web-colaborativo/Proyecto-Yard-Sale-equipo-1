@@ -73,6 +73,7 @@ h6 {
   --color-primary-10: #e7e7e7;
   --color-seconday: #ffffff;
   --color-text: #797979;
+  --color-text-10: #c7c7c7;
 }
 
 body {
@@ -93,17 +94,64 @@ a {
   margin: 0 auto;
 }
 
+/*! <--------- Header --------->*/
+.header {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template-columns: 144px 1fr auto;
+    padding: 0.8125rem 3.25rem;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 19px;
+  }
+
+  .nav__link {
+    color: var(--color-text-10);
+  }
+
+  .btn-link {
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 10px;
+  }
+
+  .sign-car {
+    display: flex;
+    gap: 26.5px;
+  }
+
+  .sign-car a {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+}
+/*! <--------- Main Section --------->*/
 .login {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   margin-top: 114px;
-  /* min-height: 100vh; */
 }
 
 .logo {
   margin-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -146,7 +194,7 @@ a {
 }
 
 .form__forgot {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-align: center;
 }
 
@@ -159,17 +207,17 @@ a {
 }
 
 .form__sign {
-  margin-top: 154px;
+  margin-top: 9.625rem;
 }
 
 @media (min-width: 768px) {
   .form__sign {
-    margin-top: 60px;
+    margin-top: 3.75rem;
   }
 }
 
 .form__sign a {
-  padding: 18px 110px;
+  padding: 1.125rem 6.875rem;
 }
 
 .btn--transparent {
@@ -177,12 +225,20 @@ a {
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
 }
+/*! <--------- Section - Recovery Pass --------->*/
+.login--recovery {
+  margin-top: 4.75rem;
+}
 
-/* Password */
+.logo--recovery {
+  margin-bottom: 0;
+}
+
 .content-pass {
   text-align: center;
   margin-top: 4.625rem;
-  font-size: 18px;
+  font-size: 1.0625rem;
+  width: 375px;
 }
 
 .content-pass__subtitle {
@@ -191,10 +247,15 @@ a {
 }
 
 .content-pass__info {
-  padding: 0 55px;
+  color: var(--color-text);
+  padding: 0 3.4375rem;
   font-weight: normal;
 }
 
+.form--recovery {
+  margin-top: 2.0625rem;
+}
+
 .form__group--email {
-  margin-top: 55px;
+  margin-top: 3.4375rem;
 }
