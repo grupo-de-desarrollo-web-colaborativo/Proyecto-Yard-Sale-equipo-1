@@ -1,2 +1,2 @@
-# Yard-Sale-login
-html y css de la vista login.
+# Yard-Sale-Create-Account
+Create account mobile first responsive HTML and CSS 

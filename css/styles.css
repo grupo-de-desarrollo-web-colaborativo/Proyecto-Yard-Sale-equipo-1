@@ -36,13 +36,14 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 /* nav */
 #nav-menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 46px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0468);
   background-color: #ffffff;
@@ -78,6 +79,8 @@ main{
   height: 100%;
   gap: 47px;
   padding: 0 17px;
+  margin: auto;
+  width: min-content;
 }
   .form h1{
     margin-top: 34px;
@@ -87,6 +90,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
   /* editing all labels and separating them from each other */
   .form form label{
@@ -131,9 +135,60 @@ main{
       font-size: 18px;
       font-weight: 700;
     }
+    /* overflow items for mobile view */
+    .menu-nav-desktop{
+      display: none;
+    }
+    .section-right a{
+      display: none;
+    }
 
-@media (min-width: 300px){
-  main{
-    align-items: center
+@media (min-width: 769px){
+  #nav-menu{
+    padding: 12px 51px;
+  }
+  /* overflow burger menu */
+  .menu-burger{
+    display: none;
+  }
+  /* set visible the tags that werent before (on mobile view) and now are visibles in desktop vew*/
+  .menu-nav-desktop{
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    width: 100%;
+  }
+  .menu-nav-desktop a{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(199, 199, 199, 1);
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .menu-nav-desktop a:first-child{
+    color: var(--Hospital-green);
+    border: 1px solid var(--Hospital-green);
+  }
+  .section-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .section-left #Yard-logo{
+    margin-right: 53px;
+  }
+  .section-right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .section-right a{
+    display: inline-block;
+    color: var(--Hospital-green);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
   }
 }
