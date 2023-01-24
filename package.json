@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "standard": "^17.0.0",
+    "standard": "17.0.0",
     "tailwindcss": "^3.2.4"
   },
   "name": "proyecto-web-colaborativo-1",
@@ -69,6 +69,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   },
   "repository": {
     "type": "git",
