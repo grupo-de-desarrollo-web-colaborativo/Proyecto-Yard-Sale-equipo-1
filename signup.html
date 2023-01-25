@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <img class="header__image" src="./assets/images/logo_yard_sale.svg" alt="company logo" />
       <nav class="nav">
+        <img src="./assets/images/Group.svg" alt="" class="nav-menu" />
+
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link btn-link btn--transparent" href="#">All</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Clothes</a></li>
@@ -23,9 +24,10 @@
           <li class="nav__item"><a class="nav__link" href="#">Toys</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Others</a></li>
         </ul>
+        <img class="header__image" src="./assets/images/logo_yard_sale.svg" alt="company logo" />
       </nav>
       <div class="sign-car">
-        <a href="">Sign in</a>
+        <a href="#">Sign in</a>
         <img src="./assets/images/icon_shopping_cart_notification.svg" alt="" width="29.5" height="27" />
       </div>
     </header>
@@ -36,6 +38,11 @@
           <img src="./assets/images/logo_yard_sale.svg" alt="" />
         </div>
         <form id="formulario" class="form">
+          <p class="form__subtitle">My account</p>
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Camila Yokoo" />
+          </div>
           <div class="form__group">
             <label for="email">Email adress</label>
             <input type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
@@ -44,13 +51,7 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="*******" />
           </div>
-          <input class="btn" type="submit" value="Log in" />
-          <div class="form__forgot">
-            <a href="./pass.html">Forgot my password</a>
-          </div>
-          <div class="form__sign">
-            <a class="btn btn--transparent" href="./signup.html">Sign up</a>
-          </div>
+          <input class="btn btn--create" type="submit" value="Create" />
         </form>
       </div>
     </main>

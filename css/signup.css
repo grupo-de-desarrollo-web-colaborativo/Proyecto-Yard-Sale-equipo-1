@@ -95,17 +95,74 @@ a {
 }
 
 /*! <--------- Header --------->*/
+/* .header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) auto;
+  padding: 11px 13px;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+} */
 .header {
+  display: flex;
+  padding: 11px 13px;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    flex-direction: row-reverse;
+  }
+}
+
+.header__image {
+  width: 96px;
+  height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .header__image {
+    width: 144px;
+    height: 30px;
+    margin-right: 0.75rem;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav-menu {
+  margin-right: 91px;
+}
+
+@media (min-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+.sign-car a {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .header {
+  /* .header {
     display: grid;
     grid-template-columns: 144px 1fr auto;
     padding: 0.8125rem 3.25rem;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+  } */
+
+  .header {
+    padding: 0.8125rem 3.25rem;
   }
 
   .nav__list {
@@ -133,6 +190,8 @@ a {
     font-size: 14px;
     font-weight: bold;
     color: var(--color-primary);
+    display: inline-block;
+    /* margin-right: 26.5px; */
   }
 }
 /*! <--------- Main Section --------->*/
@@ -141,17 +200,12 @@ a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 114px;
+  /* margin-top: 114px; */
+  margin-top: 34px;
 }
 
 .logo {
-  margin-bottom: 48px;
-}
-
-@media (min-width: 1024px) {
-  .logo {
-    display: none;
-  }
+  display: none;
 }
 
 .form {
@@ -169,6 +223,12 @@ a {
   .form {
     width: 341px;
   }
+}
+
+.form__subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 47px;
 }
 
 .form__group {
@@ -204,6 +264,17 @@ a {
   text-align: center;
 }
 
+.btn--create {
+  margin-top: 272px;
+  margin-bottom: 22px;
+}
+
+@media (min-width: 1024px) {
+  .btn--create {
+    margin-top: 33px;
+  }
+}
+
 .form__forgot {
   margin-top: 1.875rem;
   text-align: center;
@@ -235,38 +306,4 @@ a {
   background-color: transparent;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
-}
-/*! <--------- Section - Recovery Pass --------->*/
-.login--recovery {
-  margin-top: 4.75rem;
-}
-
-.logo--recovery {
-  margin-bottom: 0;
-}
-
-.content-pass {
-  text-align: center;
-  margin-top: 4.625rem;
-  font-size: 1.0625rem;
-  width: 375px;
-}
-
-.content-pass__subtitle {
-  font-weight: bold;
-  margin-bottom: 0.625rem;
-}
-
-.content-pass__info {
-  color: var(--color-text);
-  padding: 0 3.4375rem;
-  font-weight: normal;
-}
-
-.form--recovery {
-  margin-top: 2.0625rem;
-}
-
-.form__group--email {
-  margin-top: 3.4375rem;
 }
