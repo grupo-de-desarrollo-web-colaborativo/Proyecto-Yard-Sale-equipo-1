@@ -1,2 +1,2 @@
-# Yard-Sale-login
-html y css de la vista login.
+# Proyecto Yard Sale Primeras Versiones 
+primeras versiones con HTML y CSS de las interfacez.
