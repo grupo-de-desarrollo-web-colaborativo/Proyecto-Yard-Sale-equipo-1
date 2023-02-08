@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YardSale</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <h1 class="text-3xl text-center">Products</h1> -->
+    <!-- products -->
+    <main class="container w-full mx-auto relative">
+      <!-- div detail -->
+      <div id="detail" class="absolute w-full h-full bg-white hidden">
+        <!-- <div class="w-96">
+          <img class="rounded-b-3xl w-96 h-96 object-cover object-center" src="../assets/images/Bitmap.jpg" alt="" />
+          <div class="mt-3">
+            <div class="px-5">
+              <p class="text-base font-bold mb-1">$120,00</p>
+              <p class="font-normal text-sm text-Boulder">Retro refrigerator</p>
+              <p class="mt-5 font-normal text-base text-Boulder">
+                With its functional and practical interior, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen
+                or workplace.
+              </p>
+              <button class="bg-mossGreen text-white w-full inline-flex items-center justify-center gap-2 py-4 mt-14 rounded-lg">
+                <img src="../assets/images/Shape.svg" alt="" /> Add to cart
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="text-center mb-5">
+        <label for="cars" class="text-black font-bold">Order:</label>
+
+        <select name="cars" id="cars">
+          <option value="recent" class="focus:outline-none">Most recent</option>
+        </select>
+      </div>
+      <section id="list-products" class="flex flex-wrap gap-3 gap-y-7 ml-5">
+        <!-- Card 1 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/round_shelf.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$120,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="1">Round shelf</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/fridge copy.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$130,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="2">Retro refrigerator</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/round_shelf.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$125,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="3">Round shelf</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/fridge copy.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$122,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="4">Retro refrigerator</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/round_shelf.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$125,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="5">Round shelf</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="w-43 h-58 cursor-pointer">
+          <img class="card-img" src="../assets/images/fridge copy.jpg" alt="" />
+          <div class="flex items-center justify-between mt-3">
+            <div>
+              <p class="text-base font-bold">$123,00</p>
+              <p class="font-normal text-sm text-Boulder" data-id="6">Retro refrigerator</p>
+            </div>
+            <img src="../assets/images/bt_add_to_cart.svg" alt="" class="w-10 h-10" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./list-products.js"></script>
+    <script src="./products.js"></script>
+  </body>
+</html>

@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-img {
+  width: 163px;
+  height: 163px;
+  object-position: 50% 35%;
+  @apply object-cover rounded-2xl;
+}
+
+@media screen(lg) {
+  .card-img {
+    width: 216px;
+    height: 216px;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.card-detail {
+  width: 375px;
+}
