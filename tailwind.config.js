@@ -17,12 +17,9 @@ module.exports = {
         Boulder: '#797979',
         Silver: '#c7c7c7',
       },
-      // width: {
-      //   88: '23.4375rem',
-      // },
-      // height: {
-      //   88: '23.25rem',
-      // },
+      fontFamily: {
+        sans: ['Quicksand', 'sans-serif'],
+      },
     },
   },
   plugins: [],
