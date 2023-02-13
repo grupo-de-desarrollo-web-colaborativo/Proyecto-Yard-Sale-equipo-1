@@ -1,0 +1,99 @@
+header {
+    display: none;
+}
+@media (min-width: 769px) {
+    /*Aca inicia el header*/     
+    header {
+        display: block;
+        display: flex;
+        justify-content: space-between;       
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+        height: 54px;
+        padding: 12px 30px;  
+        width: 100%;      
+    }    
+    .contenedor_header_izquierda{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;        
+    }
+    .logo_header {
+        display: flex;
+        width: 20%;               
+    }
+    .logo_header img {
+        width: 100%;
+        height: 100%;
+    }    
+    .barra_navegacion {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+    }    
+    .barra_navegacion ul{
+        list-style: none;
+        display: inline-flex; 
+        align-items: center;      
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
+        width: 80%;
+    }    
+    .barra_navegacion ul li {
+        width: max-content;
+        border: none;
+        border-radius: 10px;   
+        color: #C7C7C7;
+        border: none;
+        padding: 0 10px;            
+    }
+    .barra_navegacion ul li:hover {
+        border: 1px solid #ACD9B2;
+    }
+    .barra_navegacion ul li a {
+        text-decoration: none;
+        color: #ACD9B2;
+        width: 100%;
+        height: 100%;
+        border: none;        
+    }    
+    /*Aca inicia el lado derecho del header, que contiene el boton sign in y carrito de compra*/
+    .contenedor_header_derecha {
+        display: flex;
+        justify-content: flex-end;
+        width: 20%;
+    }
+    .contenedor_header_derecha button { 
+        background-color: white;       
+        width: max-content;        
+        border-radius: 10px;
+        border: none;       
+        color: #ACD9B2;
+        height: 100%;
+        width: 100%;        
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .contenedor_header_derecha img {       
+        height: 100%;       
+        margin-left: 10px;
+    }
+    .carrito_compra_punto {
+        background-color: #ACD9B2;
+        border-radius: 50%;
+        border: 1px solid #ACD9B2;
+        width: 8px;
+        height: 8px;
+        position: relative;        
+        right: 6px;
+    } 
+/*Aca inician propiedades al main*/
+    .email {
+        padding-top: 96px; 
+        margin-bottom: 60px;       
+    }
+    .titulo img {
+        display: none;
+    }     
+}

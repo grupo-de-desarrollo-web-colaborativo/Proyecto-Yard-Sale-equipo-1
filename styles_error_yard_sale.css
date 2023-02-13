@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Aca empiezan los estilos del header*/
+
+header {    
+    width: 100%;
+    height: 90px;
+    background-color: #ACD9B2;  
+    padding: 20px 30px;    
+}    
+
+nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;  
+    color: #ACD9B2;        
+}
+
+.nav_contenido_izquierda {
+    display: flex;
+    height: 60px; 
+    width: 160px;    
+    background-color: white;
+    border-radius: 36px;   
+    justify-content: center; 
+    align-items: center; 
+} 
+
+.nav_contenido_izquierda img {
+    width: 140px;
+    height: 40px;       
+} 
+.nav_contenido_derecha {
+    display: flex;
+    height: 60px;   
+    gap: 14px;
+} 
+
+.nav_contenido_derecha a img {
+    width: 30px;
+    height: 30px;
+}
+
+figure a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Aca empiezan los estilos del body*/
+
+.contenido{
+    display: flex;   
+    background-color: white;
+    color: black;
+    text-align: center;  
+    height: 100%;      
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black;      
+}
+
+.contenedor_contenido{
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 550px;
+    height: 100%;
+    background-color: transparent;     
+}
+
+main {    
+    background-color: white ;
+    align-items: center;  
+    font-family: 'Open Sans', sans-serif;
+    height: max-content;   
+    margin-top: 10px;
+}
+
+main h1 {    
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+main :nth-child(2) {
+    font-size: 18px;     
+}
+
+main :nth-child(3) {
+    margin-top: 18px;    
+}
+
+main :nth-child(4) {
+    margin-top: 10px;   
+}
+
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+.imagenes_descarga {
+    display: flex;
+    justify-content: center;   
+    width: 100%;
+    height: 160px;
+    gap: 50px;
+}
+
+.imagenes_descarga figure {
+    height: 100%;
+}
+
+.imagenes_descarga img {
+    width: 80px;
+    height: 80px;
+}
+
+.imagenes_descarga a {
+    text-decoration: none;
+    color: black ;
+}
+
+.icono_chrome {
+    width: 100px;
+    height: 100px;
+}
+
+.icono_firefox {
+    width: 100px;
+    height: 100px;
+}
+
+/*Aca empiezan los estilos del footer*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background-color:#ACD9B2;
+    text-align: center;
+    padding: 10px 0;    
+}
+
+.contenedor_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px; 
+    height: 100%;  
+    background-color:#ACD9B2; 
+    color: black; 
+    margin-top: auto;     
+}
+
+.contenedor_footer :nth-child(1) {
+    margin-top: 0;
+}
+
+.contenedor_footer :nth-child(2) {
+    margin: 10px auto;
+}
+
+.contenedor_footer :nth-child(3) {
+    font-size: 10px;
+    color:black;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 500;
+}
+
+.contenedor_footer a {
+    color: black;
+    text-decoration: none;    
+}
+
+.contenedor_footer p img {
+   width: 14px;
+   height: 14px;
+}

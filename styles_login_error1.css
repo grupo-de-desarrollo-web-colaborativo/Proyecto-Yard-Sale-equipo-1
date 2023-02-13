@@ -5,23 +5,27 @@
 }
 .contenedor_contenido {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;    
 }
 .contenido {    
     display: flex;
-    flex-direction: column;    
-    width: 320px;
-    height: 600px;
+    flex-direction: column;
+    align-items: center;    
+    width: 280px;
+    height: 100%;
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }
 .titulo {   
     display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    margin-bottom: 24px;   
+    flex-direction: column;    
+    flex-wrap: wrap;   
+    margin-bottom: 24px;
+    width: 280px;
 }
 .contenido img:nth-child(1) {
     align-self: flex-end;
@@ -31,48 +35,61 @@
     margin-bottom: 40px;
 }
 .titulo img:nth-child(2) {  
-    align-self: center;    
+    align-self: center;  
+    width: 206px;
     height: 43px;
 }
-.email {
+.Log-in {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;    
+    align-items: center;
+}
+.Email {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;  
     font-size: 12px;
     margin-top: 24px;
-    margin-bottom: 200px;    
+    margin-bottom: 50px;
+    width: 280px;
     font-weight: 700;
 }
-.email input {   
+.Email input {
+   width: 100%;
    height: 42px;  
-   background: #F7F7F7; 
+   background: #FFF9F9; 
    border-radius: 10px;  
-   border: 1px transparent;   
+   border: 1px solid #D25050;   
    color: #797979;
    padding: 10px 8px;   
    font-weight:400;
 }
-.email button {   
+.Email button {
+    width: 100%;
     height: 59px;
-    background: #ACD9B2;
+    background: #E7E7E7;
     border-radius: 10px;  
     border: 1px transparent;
     color: white;    
     margin-top: 42px;
     font-weight: 700;
-    cursor: pointer;
 }
-.email p:nth-child(1) {       
+.Email p:nth-child(1) {       
     margin-bottom: 6px;
+    color:#D25050;
 }
-.email p:nth-child(3) {   
+.Email p:nth-child(3) {   
     margin-top: 24px;
     margin-bottom: 6px;
+    color: #D25050;
 }
-.email p:nth-child(5) {  
-    margin-top: 42px;    
-    font-weight: 700;
+.Email p:nth-child(5) {  
+    margin-top: 20px;    
+    font-weight: 400;
+    color: #D25050;
+    margin: 20px auto;
 }
-.email a:nth-child(6) {
+.Email a:nth-child(7) {
     display: flex;
     flex-direction: column;   
     align-items: center;   
@@ -80,6 +97,9 @@
     color: #ACD9B2;
     margin-top: 30px;
     text-decoration: none;
+}
+.sign-up{
+    width: 280px;
 }
 .sign-up button {
     width: 100%;
@@ -89,5 +109,4 @@
     background: none;
     border: 1px solid;   
     font-weight: 700;
-    cursor: pointer;
 }
