@@ -4,11 +4,13 @@ const card = document.querySelector('.card-img');
 const detail = document.querySelector('#detail');
 
 let selectedProduct = {};
+let cartList = [];
 
 cargarEventListener();
 
 function cargarEventListener() {
   productList.addEventListener('click', selectProduct);
+  console.log('mostrar esta seccion de carritos ');
 }
 
 function selectProduct(e) {
@@ -50,7 +52,7 @@ function mostrarHTML(product) {
           <p class="mt-5 font-normal text-base text-Boulder">
             ${description}
           </p>
-          <button class="bg-mossGreen text-white w-full inline-flex items-center justify-center gap-2 py-4 mt-14 rounded-lg">
+          <button id="cart" class="bg-mossGreen text-white w-full inline-flex items-center justify-center gap-2 py-4 mt-14 rounded-lg">
             <img src="./images/Shape.svg" alt="" /> Add to cart
           </button>
         </div>
@@ -62,9 +64,31 @@ function mostrarHTML(product) {
   `;
 
   const close = document.querySelector('#close');
+  const cart = document.querySelector('#cart');
+
   close.addEventListener('click', () => {
     if (detail.classList.contains('active')) {
       detail.classList.remove('active');
     }
   });
+
+  cart.addEventListener('click', addCart);
+}
+
+function addCart() {
+  console.log('cart...');
+  const exist = cartList.some((product) => product.id === selectedProduct.id);
+  if (exist) {
+    console.log('The product already exists in the cart');
+  } else {
+    console.log('Add product');
+    cartList = [...cartList, selectedProduct];
+  }
+
+  console.log(cartList);
+  showProductsCart();
+}
+
+function showProductsCart() {
+  console.log('products cart');
 }
