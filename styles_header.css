@@ -1,10 +1,6 @@
-header {
-    display: none;
-}
-@media (min-width: 769px) {
-    /*Aca inicia el header*/     
-    header {
-        display: block;
+@media (min-width: 768px) {
+    /*Aca inician las propiedades del header*/      
+    header {        
         display: flex;
         justify-content: space-between;       
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
@@ -12,7 +8,7 @@ header {
         padding: 12px 30px;  
         width: 100%;      
     }    
-    .contenedor_header_izquierda{
+    .header_izquierda{
         display: flex;
         justify-content: space-between;
         width: 80%;        
@@ -24,7 +20,13 @@ header {
     .logo_header img {
         width: 100%;
         height: 100%;
-    }    
+    }
+    .logo_header a:nth-child(1) {
+        display: none;
+    } 
+    .logo_header a:nth-child(2) {
+        display: flex;
+    }     
     .barra_navegacion {
         width: 80%;
         display: flex;
@@ -56,6 +58,9 @@ header {
         width: 100%;
         height: 100%;
         border: none;        
+    }
+    .barra_navegacion img {
+        display: none;
     }    
     /*Aca inicia el lado derecho del header, que contiene el boton sign in y carrito de compra*/
     .contenedor_header_derecha {
@@ -88,7 +93,11 @@ header {
         position: relative;        
         right: 6px;
     } 
-/*Aca inician propiedades al main*/
+    .contenedor_header_derecha a:nth-child(1) {
+        display: flex;
+        text-decoration: none;
+    }
+    /*Aca inician propiedades al main*/    
     .email {
         padding-top: 96px; 
         margin-bottom: 60px;       
