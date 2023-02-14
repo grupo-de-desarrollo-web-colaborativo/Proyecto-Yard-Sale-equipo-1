@@ -93,7 +93,7 @@
         position: relative;        
         right: 6px;
     } 
-    .contenedor_header_derecha a:nth-child(1) {
+    .header_derecha a:nth-child(1) {
         display: flex;
         text-decoration: none;
     }

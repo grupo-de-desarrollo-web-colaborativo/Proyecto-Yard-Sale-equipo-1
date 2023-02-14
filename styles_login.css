@@ -5,7 +5,7 @@
 }
 /*Aca inician las propiedades del header*/   
 header {        
-    display: flex;
+    display: none;
     justify-content: space-between;       
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
     height: 54px;
@@ -193,4 +193,8 @@ header {
 
 .hidden {
     display: none;
+}
+
+.active-header {
+    display: flex;
 }
