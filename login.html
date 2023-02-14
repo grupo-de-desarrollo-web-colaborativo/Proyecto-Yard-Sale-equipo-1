@@ -30,22 +30,27 @@
                 </nav> 
             </div> 
             <div class="contenedor_header_derecha">
-                <a href="./login.html"><button>Sign In</button></a>
+                <!-- le agrego un id "signIn" al ancla -->
+                <a href="./login.html" id="signIn"><button>Sign In</button></a>
                 <a href="./pagina_construccion.html"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras"></a>
                 <div class="carrito_compra_punto"></div>                
             </div>
-        </header>        
-        <main class="contenido">            
+        </header>
+        <!-- le agregue un id "formContainer" para llamarlo desde js  -->
+        <main class="contenido" id="formContainer"> 
             <div class="titulo">
-                <img src="./Images/icon_close.png" alt="icono-cerrar">
+                 <!-- le agregue un id "iconClose" -->
+                <img src="./Images/icon_close.png" alt="icono-cerrar" id="iconClose">
                 <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale">           
             </div>
             <div class="email">
                 <p>Email address</p>
-                <input type="email" placeholder="platzi@example.com">
+                 <!-- le agregue un id "inputEmail"-->
+                <input type="email" placeholder="platzi@example.com" id="inputEmail">
                 <p>Passsword</p>
-                <input type="text" value="************">        
-                <button>Log in</button>
+                <!-- le agregue un id "inputPassword"-->
+                <input type="text" value="************" id="inputPassword">        
+                <button id="logInButton">Log in</button>
                 <a href="./password_recovery.html">Forgot my password</a>
             </div>
             <div class="sign-up">
@@ -53,5 +58,7 @@
             </div>           
         </main>   
     </div>      
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
