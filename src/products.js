@@ -10,7 +10,6 @@ cargarEventListener();
 
 function cargarEventListener() {
   productList.addEventListener('click', selectProduct);
-  console.log('mostrar esta seccion de carritos ');
 }
 
 function selectProduct(e) {

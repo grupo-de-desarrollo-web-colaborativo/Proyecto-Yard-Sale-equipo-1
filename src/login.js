@@ -2,11 +2,18 @@ const form = document.querySelector('#form');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#password');
 
+let accounts = [];
+
+accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+console.log('accounts1', accounts);
+
 form.addEventListener('submit', logIn);
 
 function logIn(e) {
   e.preventDefault();
-  if (email.value === 'yard@gmail.com' && pass.value === 'prueba') {
+  const exist = accounts.some((account) => account.email === email.value && account.pass === pass.value);
+  console.log(exist);
+  if (exist) {
     console.log('Login pass');
     // window.location.replace('./products.html');
     window.location.href = 'products.html';

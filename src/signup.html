@@ -9,11 +9,16 @@
   </head>
   <body>
     <main>
-      <div class="flex items-center flex-col justify-center mt-28">
-        <div class="mb-12 lg:hidden">
-          <img src="./images/logo_yard_sale.svg" alt="" />
-        </div>
+      <div class="flex items-center flex-col justify-center mt-8">
+        <!-- <div class="logo">
+          <img src="./assets/images/logo_yard_sale.svg" alt="" />
+        </div> -->
         <form id="form" class="w-72 mx-auto">
+          <p class="text-lg font-bold mb-12">My account</p>
+          <div class="mb-6">
+            <label for="name" class="font-bold">Name</label>
+            <input class="bg-wildSand w-full h-10 p-2 border-none rounded-lg mt-2" type="text" name="name" id="name" placeholder="Camila Yokoo" />
+          </div>
           <div class="mb-6">
             <label for="email" class="font-bold">Email Adress</label>
             <input class="bg-wildSand w-full h-10 p-2 border-none rounded-lg mt-2" type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
@@ -22,21 +27,10 @@
             <label for="password" class="font-bold">Password</label>
             <input class="bg-wildSand w-full h-10 p-2 border-none rounded-lg mt-2" type="password" name="password" id="password" placeholder="*******" />
           </div>
-          <input class="block text-center bg-mossGreen border-none rounded-lg w-full text-white py-4 px-28 font-bold text-lg mt-5 cursor-pointer" type="submit" value="Log in" />
-          <div class="mt-8 text-center">
-            <a class="p-0 border-none text-mossGreen font-medium text-sm" href="./pass.html">Forgot my password</a>
-          </div>
-          <div class="mt-40">
-            <a
-              class="block text-center bg-mossGreen rounded-lg w-full font-bold text-lg mt-5 cursor-pointer bg-transparent text-mossGreen border-solid border-2 border-mossGreen py-4 px-24"
-              href="./signup.html"
-              >Sign up</a
-            >
-          </div>
+          <input class="block text-center bg-mossGreen border-none rounded-lg w-full text-white py-4 px-28 font-bold text-lg mt-5 cursor-pointer" type="submit" value="Create" />
         </form>
       </div>
     </main>
-    <script src="./login.js"></script>
-    <!-- <script src="./signup.js"></script> -->
+    <script src="./signup.js"></script>
   </body>
 </html>
