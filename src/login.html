@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YardSale</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="flex items-center flex-col justify-center mt-28">
+        <div class="mb-12 lg:hidden">
+          <img src="./images/logo_yard_sale.svg" alt="" />
+        </div>
+        <form id="form" class="w-72 mx-auto">
+          <div class="mb-6">
+            <label for="email" class="font-bold">Email Adress</label>
+            <input class="bg-wildSand w-full h-10 p-2 border-none rounded-lg mt-2" type="email" name="email" id="email" placeholder="camilayokoo@gmail.com" />
+          </div>
+          <div class="mb-6">
+            <label for="password" class="font-bold">Password</label>
+            <input class="bg-wildSand w-full h-10 p-2 border-none rounded-lg mt-2" type="password" name="password" id="password" placeholder="*******" />
+          </div>
+          <input class="block text-center bg-mossGreen border-none rounded-lg w-full text-white py-4 px-28 font-bold text-lg mt-5 cursor-pointer" type="submit" value="Log in" />
+          <div class="mt-8 text-center">
+            <a class="p-0 border-none text-mossGreen font-medium text-sm" href="./pass.html">Forgot my password</a>
+          </div>
+          <div class="mt-40">
+            <a
+              class="block text-center bg-mossGreen rounded-lg w-full font-bold text-lg mt-5 cursor-pointer bg-transparent text-mossGreen border-solid border-2 border-mossGreen py-4 px-24"
+              href="./signup.html"
+              >Sign up</a
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./login.js"></script>
+  </body>
+</html>

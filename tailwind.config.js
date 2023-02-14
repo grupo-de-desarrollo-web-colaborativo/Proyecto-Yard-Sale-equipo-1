@@ -16,6 +16,7 @@ module.exports = {
         white: '#ffffff',
         Boulder: '#797979',
         Silver: '#c7c7c7',
+        wildSand: '#f7f7f7',
       },
       fontFamily: {
         sans: ['Quicksand', 'sans-serif'],
