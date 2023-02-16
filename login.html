@@ -17,7 +17,8 @@
         <header class="header" id="header">                             
             <div class="header_izquierda">
                 <div class="logo_header">
-                    <a href="./pagina_construccion.html"><img src="./Images/icon_menu.svg" alt="icono_menu"></a>
+                    <!-- Le quito la referencia al ancla y agrego un id -->
+                    <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon"></a>
                     <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale"></a>
                 </div>                                      
                 <nav class="barra_navegacion">               
@@ -40,10 +41,10 @@
             </div>
         </header>        
         <!-- le agregue un id "formContainer" para llamarlo desde js  -->
-        <main class="contenido" id="formContainer">            
+        <main class="contenido" id="formContainer"> 
             <div class="titulo">
                  <!-- le agregue un id "iconClose" -->
-                <img src="./Images/icon_close.png" alt="icono-cerrar" id="iconClose">
+                <img src="./Images/icon_close.png" alt="icono-cerrar" id="closeIconLogin">
                 <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale">           
             </div>
             <div class="email">
@@ -58,10 +59,34 @@
             </div>
             <div class="sign-up">
                 <button>Sign up</button>  
-            </div>           
+            </div>  
         </main>   
+        
     </div>      
-
+     <!-- Categories versión mobile oculto-->
+     <div class="categories-mobile hidden" id="menuMobile">
+        <span class="close-icon" id="closeIconCategories"></span>
+        <nav class="nav-mobile">
+          <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
+          <ul class="flex flex-col gap-9 nav-mobile__list">
+            <li class="nav-mobile__item"><a href="#">All</a></li>
+            <li class="nav-mobile__item"><a href="#">Clothes</a></li>
+            <li class="nav-mobile__item"><a href="#">Electronics</a></li>
+            <li class="nav-mobile__item"><a href="#">Furniture</a></li>
+            <li class="nav-mobile__item"><a href="#">Toys</a></li>
+            <li class="nav-mobile__item"><a href="#">Others</a></li>
+         </ul>
+         
+        </nav>
+        <div class="hidden">
+            <li class="nav-mobile__item"><a href="#">My orders</a></li>
+            <li class="nav-mobile__item"><a href="#">My account</a></li>
+            <li>
+                <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
+            </li>
+        </div>
+        <a class="menu-desktop__item--primary-color" href="#" id="logInAnchor">Log in</a>
+      </div>  
     <script src="./js/index.js"></script>
 </body>
 </html>

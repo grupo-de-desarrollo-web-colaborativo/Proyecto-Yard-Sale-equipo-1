@@ -1,133 +1,161 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*Aca inician las propiedades del header*/   
-header {        
-    display: flex;
-    justify-content: space-between;       
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
-    height: 54px;
-    padding: 12px 30px;  
-    width: 100%;      
-}    
-.header_izquierda{
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*Aca inician las propiedades del header*/
+header {
     display: flex;
     justify-content: space-between;
-    width: 80%;        
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+    height: 54px;
+    padding: 12px 30px;
+    width: 100%;
 }
+
+.header_izquierda {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
 .logo_header {
     display: flex;
-    width: 20%;               
+    width: 20%;
 }
+
 .logo_header img {
     width: 100%;
     height: 100%;
 }
+
 .logo_header a:nth-child(2) {
     display: none;
-}    
+}
+
 .barra_navegacion {
     width: 80%;
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
-}    
-.barra_navegacion ul{
+}
+
+.barra_navegacion ul {
     list-style: none;
-    display: inline-flex; 
-    align-items: center;      
+    display: inline-flex;
+    align-items: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
     width: 80%;
     display: none;
-}    
+}
+
 .barra_navegacion ul li {
     width: max-content;
     border: none;
-    border-radius: 10px;   
+    border-radius: 10px;
     color: #C7C7C7;
     border: none;
-    padding: 0 10px;            
+    padding: 0 10px;
 }
+
 .barra_navegacion ul li:hover {
     border: 1px solid #ACD9B2;
 }
+
 .barra_navegacion ul li a {
     text-decoration: none;
     color: #ACD9B2;
     width: 100%;
     height: 100%;
-    border: none;        
+    border: none;
 }
+
 .barra_navegacion img {
     display: flex;
     width: 100px;
     height: 100%;
     margin: 0 auto;
 }
+
 /*Aca inicia el lado derecho del header, que contiene el boton sign in y carrito de compra*/
 .header_derecha {
     display: flex;
     justify-content: flex-end;
     width: 20%;
 }
-.header_derecha button { 
-    background-color: white;       
-    width: max-content;        
+
+.header_derecha button {
+    background-color: white;
+    width: max-content;
     border-radius: 10px;
-    border: none;       
+    border: none;
     color: #ACD9B2;
     height: 100%;
-    width: 100%;        
+    width: 100%;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     cursor: pointer;
 }
-.header_derecha img {       
-    height: 100%;       
+
+.header_derecha img {
+    height: 100%;
     margin-left: 10px;
 }
+
 .carrito_compra_punto {
     background-color: #ACD9B2;
     border-radius: 50%;
     border: 1px solid #ACD9B2;
     width: 8px;
     height: 8px;
-    position: relative;        
+    position: relative;
     right: 6px;
-} 
+}
+
 .header_derecha a:nth-child(1) {
     display: none;
 }
+
 /*Aca comienzan las propiedades del main*/
 .contenedor_contenido {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
 }
-.contenido { 
+
+.contenido {
     position: absolute;
     background-color: white;
     bottom: 0;
     top: 0;
     right: 0;
-    left: 0;   
+    left: 0;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     width: 320px;
     height: 100%;
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }
-.titulo {   
+
+.titulo {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
-    margin-bottom: 24px;   
+    justify-content: center;
+    margin-bottom: 24px;
 }
+
 .contenido img:nth-child(1) {
     align-self: flex-end;
     width: 14px;
@@ -135,70 +163,134 @@ header {
     margin-top: 26px;
     margin-bottom: 40px;
 }
-.titulo img:nth-child(2) {  
-    align-self: center;    
+
+.titulo img:nth-child(2) {
+    align-self: center;
     height: 43px;
 }
+
 .email {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     font-size: 12px;
     margin-top: 24px;
-    margin-bottom: 160px;    
+    margin-bottom: 160px;
     font-weight: 700;
 }
-.email input {   
-   height: 42px;  
-   background: #F7F7F7; 
-   border-radius: 10px;  
-   border: 1px transparent;   
-   color: #797979;
-   padding: 10px 8px;   
-   font-weight:400;
+
+.email input {
+    height: 42px;
+    background: #F7F7F7;
+    border-radius: 10px;
+    border: 1px transparent;
+    color: #797979;
+    padding: 10px 8px;
+    font-weight: 400;
 }
-.email button {   
+
+.email button {
     height: 59px;
     background: #ACD9B2;
-    border-radius: 10px;  
+    border-radius: 10px;
     border: 1px transparent;
-    color: white;    
+    color: white;
     margin-top: 42px;
     font-weight: 700;
     cursor: pointer;
 }
-.email p:nth-child(1) {       
+
+.email p:nth-child(1) {
     margin-bottom: 6px;
 }
-.email p:nth-child(3) {   
+
+.email p:nth-child(3) {
     margin-top: 24px;
     margin-bottom: 6px;
 }
-.email p:nth-child(5) {  
-    margin-top: 42px;    
+
+.email p:nth-child(5) {
+    margin-top: 42px;
     font-weight: 700;
 }
+
 .email a:nth-child(6) {
     display: flex;
-    flex-direction: column;   
-    align-items: center;   
+    flex-direction: column;
+    align-items: center;
     font-weight: 500;
     color: #ACD9B2;
     margin-top: 30px;
     text-decoration: none;
 }
+
 .sign-up button {
     width: 100%;
     height: 59px;
     border-radius: 20px;
     color: #ACD9B2;
     background: none;
-    border: 1px solid;   
+    border: 1px solid;
     font-weight: 700;
     cursor: pointer;
+}
+
+/* estilos de la versión mobile de categories -Edwin*/
+.categories-mobile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px 44px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Quicksand', 'roboto';
+}
+
+.categories-mobile .close-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url('../assets/icons/icon_close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-self: flex-end;
+}
+
+.categories-mobile .nav-mobile {
+    height: 100%;
+    font-weight: 700;
+}
+
+.categories-mobile .nav-mobile__title {
+    margin: 8px 0 40px;
+}
+
+.categories-mobile .nav-mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    list-style: none;
+}
+
+.nav-mobile__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-desktop__item--primary-color {
+    width: max-content;
+    font-size: 14px;
+    color: #ACD9B2;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 /* le agregue un clase hidden con el display none */
 .hidden {
     display: none;
 }
-
