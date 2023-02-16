@@ -97,9 +97,15 @@
         display: flex;
         text-decoration: none;
     }
-    /*Aca inician propiedades al main*/    
+    /*Aca inician propiedades al main*/   
+    .contenido { /*edité el contenedor main para centrarlo en la vista desktop*/
+        position: initial;
+        justify-content: center;
+        background-color: transparent;
+    }
+    
     .email {
-        padding-top: 96px; 
+        padding-top: 0px; /*le reduje el padding a 0 para que se vea centrado en la vista desktop*/
         margin-bottom: 60px;       
     }
     .titulo img {
