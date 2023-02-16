@@ -18,12 +18,16 @@
         text-decoration: none;
     }
     /*Aca inician propiedades al main*/  
+    .contenedor_contenido {
+        align-content: center;
+        flex-wrap: wrap;
+    }
     .contenido {       
         margin: auto;
     }  
     .email {
-        padding-top: 96px; 
-        margin-bottom: 50px;       
+        padding-top: 42px; 
+        margin: auto;     
     }
     .titulo img {
         display: none;
