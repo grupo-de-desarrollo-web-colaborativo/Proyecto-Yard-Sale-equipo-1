@@ -17,7 +17,10 @@
         display: flex;
         text-decoration: none;
     }
-    /*Aca inician propiedades al main*/    
+    /*Aca inician propiedades al main*/  
+    .contenido {       
+        margin: auto;
+    }  
     .email {
         padding-top: 96px; 
         margin-bottom: 50px;       
