@@ -30,5 +30,8 @@
     }
     .titulo img {
         display: none;
-    }     
+    }    
+    .button button {
+        margin-top: 35px;
+    } 
 }
