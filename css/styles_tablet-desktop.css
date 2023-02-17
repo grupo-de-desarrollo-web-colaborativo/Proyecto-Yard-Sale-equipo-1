@@ -27,9 +27,12 @@
     }  
     .email {
         padding-top: 42px; 
-        margin: auto;     
+        margin: auto;    
     }
     .titulo img {
         display: none;
-    }     
+    }    
+    .button button {
+        margin-top: 35px;
+    } 
 }

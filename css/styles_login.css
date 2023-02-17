@@ -142,7 +142,7 @@ header {
     right: 0;
     left: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     width: 320px;
     height: 100%;
     margin: 0 auto;
