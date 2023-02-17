@@ -26,3 +26,12 @@ logInAnchor.addEventListener('click', () => {
   toggleOpenClose(menuCategories);
   toggleOpenClose(mobileLogin);
 });
+
+
+const checkout = document.querySelector('#checkout');
+const cartIcon = document.querySelector('#shoppingCartIcon');
+
+cartIcon.addEventListener('click', () => {
+  toggleOpenClose(checkout);
+  toggleOpenClose(mobileLogin);
+});
