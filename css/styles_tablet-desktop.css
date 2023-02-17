@@ -17,17 +17,16 @@
         display: flex;
         text-decoration: none;
     }
-    /*Aca inician propiedades al main*/  
-    .contenedor_contenido {
-        align-content: center;
-        flex-wrap: wrap;
+    /*Aca inician propiedades al main*/   
+    .contenido { /*edité el contenedor main para centrarlo en la vista desktop*/
+        position: initial;
+        justify-content: center;
+        background-color: transparent;
     }
-    .contenido {       
-        margin: auto;
-    }  
+    
     .email {
-        padding-top: 42px; 
-        margin: auto;     
+        padding-top: 0px; /*le reduje el padding a 0 para que se vea centrado en la vista desktop*/
+        margin-bottom: 60px;       
     }
     .titulo img {
         display: none;
