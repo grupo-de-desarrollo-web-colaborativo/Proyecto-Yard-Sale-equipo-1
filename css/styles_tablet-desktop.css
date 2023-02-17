@@ -17,19 +17,6 @@
         display: flex;
         text-decoration: none;
     }
-<<<<<<< HEAD
-    /*Aca inician propiedades al main*/  
-    .contenedor_contenido {
-        align-content: center;
-        flex-wrap: wrap;
-    }
-    .contenido {       
-        margin: auto;
-    }  
-    .email {
-        padding-top: 42px; 
-        margin: auto;    
-=======
     /*Aca inician propiedades al main*/   
     .contenido { /*edité el contenedor main para centrarlo en la vista desktop*/
         position: initial;
@@ -40,7 +27,6 @@
     .email {
         padding-top: 0px; /*le reduje el padding a 0 para que se vea centrado en la vista desktop*/
         margin-bottom: 60px;       
->>>>>>> 678e4eb5fea395611af5ec56a73d9a14689098e6
     }
     .titulo img {
         display: none;
