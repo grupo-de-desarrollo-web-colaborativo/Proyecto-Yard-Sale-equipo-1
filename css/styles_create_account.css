@@ -108,26 +108,25 @@ header {
 /*Desde acá inician las propiedades del main, todo el cuerpo de la página*/
 .contenedor_contenido {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; 
-    align-content: center;  
-    width: 100%;    
-    margin: 0 auto;
+    flex-direction: column;   
+    height: 100vh;    
 }
-.contenido {          
+.contenido {   
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    width: 100%;  
-    margin: 0 auto; 
-    font-family: 'Quicksand', sans-serif;     
+    justify-content: center;
+    background-color: white; 
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
 }
 .email {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column; 
+    align-self: center;   
     font-size: 12px;    
-    width: 280px;
+    width: 340px;
     margin-bottom: 270px;    
 }
 .email input {
@@ -146,25 +145,26 @@ header {
    margin-top: 34px;
    margin-bottom: 48px;
 }
-.email p:nth-child(2) {       
+.email label:nth-child(2) {       
     margin-bottom: 6px;
     font-weight: 700;
     font-size: 14px;
 }
-.email p:nth-child(4) {  
+.email label:nth-child(4) {  
     font-weight: 700;  
     font-size: 14px;
     margin-top: 24px;
     margin-bottom: 6px;
 }
-.email p:nth-child(6) {  
+.email label:nth-child(6) {  
     font-weight: 700;
     font-size: 14px;  
     margin-top: 24px;       
 }
 .button {
-    width: 280px;
+    width: 340px;
     height: 59px;
+    align-self: center;   
 }
 .button button {
     width: 100%;

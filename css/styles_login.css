@@ -154,7 +154,7 @@ header {
     flex-direction: column;
     align-self: center;
     margin-bottom: 24px;
-    width: 320px;
+    width: 340px;
 }
 
 .contenido img:nth-child(1) {
@@ -178,7 +178,7 @@ header {
     margin-top: 24px;
     margin-bottom: 160px;
     font-weight: 700;
-    width: 320px;
+    width: 340px;
 }
 
 .email input {
@@ -189,7 +189,7 @@ header {
     color: #797979;
     padding: 10px 8px;
     font-weight: 400;
-    width: 320px;
+    width: 340px;
 }
 
 .email button {
@@ -201,19 +201,19 @@ header {
     margin-top: 42px;
     font-weight: 700;
     cursor: pointer;
-    width: 320px;
+    width: 340px;
 }
 
-.email p:nth-child(1) {
+.email label:nth-child(1) {
     margin-bottom: 6px;
 }
 
-.email p:nth-child(3) {
+.email label:nth-child(3) {
     margin-top: 24px;
     margin-bottom: 6px;
 }
 
-.email p:nth-child(5) {
+.email label:nth-child(5) {
     margin-top: 42px;
     font-weight: 700;
 }
@@ -228,7 +228,7 @@ header {
     text-decoration: none;
 }
 .sign-up {
-    width: 320px;
+    width: 340px;
     align-self: center;
 }
 
