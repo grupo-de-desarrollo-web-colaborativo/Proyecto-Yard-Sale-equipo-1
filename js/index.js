@@ -32,6 +32,12 @@ const checkout = document.querySelector('#checkout');
 const cartIcon = document.querySelector('#shoppingCartIcon');
 
 cartIcon.addEventListener('click', () => {
+  mobileLogin.classList.add('hidden');
   toggleOpenClose(checkout);
-  toggleOpenClose(mobileLogin);
 });
+
+// función de abrir el menu de la cuenta en desktop
+const signIn = document.querySelector('#signIn');
+const menuSignIng = document.querySelector('#menuSignIn');
+
+signIn.addEventListener('click', () => toggleOpenClose(menuSignIng));
