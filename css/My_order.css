@@ -1,0 +1,142 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 375px;
+    height: 812px;
+}
+
+
+.headerAside {
+    width: 384px;
+    height: 20px;
+   position: relative;
+}
+
+.textoHeader {
+
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 56px;
+
+}
+
+
+.CajaPrecio {
+
+    background-color: #F7F7F7;
+    width: 339px;
+    height: 76px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SubCajaPrecio {
+
+    margin-left: 16px;
+}
+
+.textPriceBox {
+
+    font-size: 16px;
+    font-weight: 700;
+    margin: 18px;
+}
+
+.ItemList {
+    
+    width: 375px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Item {
+
+    width: 345px;
+    height: 76px;
+    margin-top: 20px;
+    display:flex ;
+    align-items: center;
+}
+
+.CajitaFoto {
+    width: 76px;
+    height: 76px;
+    margin-right: 17px;
+    margin-left: 7px;
+    overflow: hidden;
+    border-radius: 20px;
+    
+}
+
+.TextItem {
+    width: 115px;
+    margin-right: 48px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #797979;
+}
+
+.PriceItem {
+    margin-right: 18px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (min-width:375px ) {
+
+    .headerAside {
+        width: 404px;
+        height: 147px;
+    }
+
+    .textoHeader {
+
+        display: none;
+    
+    }
+    
+
+    .CajaPrecio {
+        width: 405px;
+        margin-left: 0px;
+    }
+
+    .responsive {
+        display: none;
+    }
+    
+    .ItemList {
+
+        width: 405px;
+    }
+
+    .Item {
+
+        width: 405px;
+
+    }
+
+    .CajitaFoto {
+        margin-left: 0px;
+    }
+
+    .TextItem {
+        margin-right: 114px;
+    }
+
+ 
+
+}

@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 375px;
+    height: 812px;
+}
+
+
+.headerAside {
+    width: 404px;
+    height: 147px;
+   position: relative;
+}
+
+.textoHeader {
+
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+
+.CajaPrecio {
+
+    width: 405px;
+    height: 383px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.SubCajaPrecio {
+
+    width: 405px;
+    height: 42px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.textPriceBox {
+
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 196px;
+    
+}
+
+.cajaFlechita {
+    width: 20px;
+    height: 20px;
+}
+
+.TextItem {
+    width: 115px;
+   
+    font-size: 14px;
+    font-weight: 400;
+    color: #797979;
+}
+
+.PriceItem {
+    
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width:375px ) {
+
+    main {
+
+        width: 375px;
+        height: 812px;
+
+    }
+
+    .headerAside {
+
+        width: 375px;
+    }
+
+    .textoHeader {
+        display: none;
+    }
+
+    .CajaPrecio {
+        width: 375px;
+        margin: 0px;
+    }
+
+    .SubCajaPrecio {
+        width: 363px;
+    }
+
+    .TextPrecio {
+        margin-left: 15px ;
+
+    }
+
+    .textPriceBox {
+
+
+    margin-left: 133px;
+    }
+ 
+
+}
