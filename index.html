@@ -2,18 +2,151 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/global.css">
-  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles_login.css" />
+  <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
+  <title>Yard Sale</title>
 </head>
 
 <body>
-  <h1>Aquí va el contenido principal.</h1>
+  <!-- Maquetado del header y login por Carlos -->
+  <div class="contenedor_contenido">
+    <header class="header" id="header">
+      <div class="header_izquierda">
+        <div class="logo_header">
+          <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon" /></a>
+          <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
+        </div>
+        <nav class="barra_navegacion">
+          <ul>
+            <li><a href="./pagina_construccion.html">All</a></li>
+            <li><a href="./pagina_construccion.html">Clothes</a></li>
+            <li><a href="./pagina_construccion.html">Electronis</a></li>
+            <li><a href="./pagina_construccion.html">Furniture</a></li>
+            <li><a href="./pagina_construccion.html">Toys</a></li>
+            <li><a href="./pagina_construccion.html">Others</a></li>
+          </ul>
+          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+        </nav>
+      </div>
+      <div class="header_derecha">
+        <a href="./login.html" id="signIn"><button>Sign In</button></a>
+        <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
+        <div class="carrito_compra_punto"></div>
+      </div>
+    </header>
+    <!-- menu de sign in desktop     -->
+    <div class="hidden menu-signIn" id="menuSignIn">
+      <ul>
+        <li class="menu-signIn__item"><a href="">My orders</a></li>
+        <li class="menu-signIn__item"><a href="">My account</a></li>
+      </ul>
+
+      <a href="#" class="menu-signIn__item menu-signIn__item--primary-color">Sign out</a>
+    </div>
+
+    <!-- checkout  -->
+    <div class="shopping-cart hidden" id="checkout">
+      <div class="product-card">
+        <div class="product-card__left-container">
+          <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+          <p class="product-card__name">Round Shelf</p>
+        </div>
+
+        <div class="product-card__right-container">
+          <p id="priceProduct1">$ 120,00</p>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__left-container">
+          <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+          <p class="product-card__name">Round Shelf</p>
+        </div>
+
+        <div class="product-card__right-container">
+          <p id="priceProduct2">$ 120,00</p>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__left-container">
+          <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+          <p class="product-card__name">Round Shelf</p>
+        </div>
+
+        <div class="product-card__right-container">
+          <p id="priceProduct3">$ 120,00</p>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__left-container">
+          <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+          <p class="product-card__name">Round Shelf</p>
+        </div>
+
+        <div class="product-card__right-container">
+          <p id="priceProduct4">$ 120,00</p>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__left-container">
+          <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+          <p class="product-card__name">Round Shelf</p>
+        </div>
+
+        <div class="product-card__right-container">
+          <p id="priceProduct5">$ 120,00</p>
+          <span class="close-icon"></span>
+        </div>
+      </div>
+
+      <div class="total-price">
+        <div class="total-price__final-price">
+          <p>Total</p>
+          <p>$ 560.00</p>
+        </div>
+
+        <input class="primary-button" value="Checkout" type="submit" />
+      </div>
+    </div>
+  </div>
+  <!-- Categories versión mobile oculto-->
+  <div class="categories-mobile hidden" id="menuMobile">
+    <span class="close-icon" id="closeIconCategories"></span>
+    <nav class="nav-mobile">
+      <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
+      <ul class="flex flex-col gap-9 nav-mobile__list">
+        <li class="nav-mobile__item"><a href="#">All</a></li>
+        <li class="nav-mobile__item"><a href="#">Clothes</a></li>
+        <li class="nav-mobile__item"><a href="#">Electronics</a></li>
+        <li class="nav-mobile__item"><a href="#">Furniture</a></li>
+        <li class="nav-mobile__item"><a href="#">Toys</a></li>
+        <li class="nav-mobile__item"><a href="#">Others</a></li>
+      </ul>
+    </nav>
+    <div class="hidden">
+      <li class="nav-mobile__item"><a href="#">My orders</a></li>
+      <li class="nav-mobile__item"><a href="#">My account</a></li>
+      <li>
+        <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
+      </li>
+    </div>
+    <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
+  </div>
+
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

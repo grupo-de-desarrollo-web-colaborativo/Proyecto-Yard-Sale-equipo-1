@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles_login.css">
-    <link rel="stylesheet" href="./css/styles_tablet-desktop.css">
-    <title>Yard Sale</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles_login.css">
+  <link rel="stylesheet" href="./css/styles_tablet-desktop.css">
+  <title>Login</title>
 </head>
-
 <body>
-    <!-- Maquetado del header y login por Carlos -->
-    <div class="contenedor_contenido">
+      <!-- Maquetado del header y login por Carlos -->
+      <div class="contenedor_contenido">
         <header class="header" id="header">
             <div class="header_izquierda">
                 <div class="logo_header">
-                    <!-- Le quito la referencia al ancla y agrego un id -->
                     <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon"></a>
                     <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale"></a>
                 </div>
@@ -36,179 +30,140 @@
                 </nav>
             </div>
             <div class="header_derecha">
-                <!-- le agrego un id "signIn" al ancla -->
                 <a href="./login.html" id="signIn"><button>Sign In</button></a>
                 <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg"
                         alt="carrito_compras"></a>
                 <div class="carrito_compra_punto"></div>
             </div>
         </header>
-    <!-- menu de sign in desktop     -->
-    <div class="hidden menu-signIn" id="menuSignIn">
-        <ul>
-            <li class="menu-signIn__item"><a href="">My orders</a></li>
-            <li class="menu-signIn__item"><a href="">My account</a></li>
-        </ul>
+  <div class="shopping-cart hidden" id="checkout">
 
-        <a href="#" class="menu-signIn__item menu-signIn__item--primary-color">Sign out</a>
-    </div>
-        <!-- le agregue un id "formContainer" para llamarlo desde js  -->
-        <main class="contenido" id="formContainer">
-            <div class="titulo">
-                <!-- le agregue un id "iconClose" -->
-                <img src="./Images/icon_close.png" alt="icono-cerrar" id="closeIconLogin">
-                <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale">
-            </div>
-            <form class="email">
-                <label>Email address</label>
-                <!-- le agregue un id "inputEmail"-->
-                <input type="email" placeholder="platzi@example.com" id="inputEmail">
-                <label>Passsword</label>
-                <!-- le agregue un id "inputPassword"-->
-                <input type="text" value="************" id="inputPassword">
-                <button id="logInButton">Log in</button>
-                <a href="./password_recovery.html">Forgot my password</a>
-            </form>
-            <div class="sign-up">
-                <button>Sign up</button>
-            </div>
+      <div class="product-card">
 
 
-        </main>
-        <!-- checkout  -->
-        <div class="shopping-cart hidden" id="checkout">
+          <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
+              <p class="product-card__name">Round Shelf</p>
+          </div>
 
-                    <div class="product-card">
-            
-            
-                        <div class="product-card__left-container">
-                            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
-                            <p class="product-card__name">Round Shelf</p>
-                        </div>
-            
-                        <div class="product-card__right-container">
-                            <p>$ 120,00</p>
-                            <span class="close-icon"></span>
-                        </div>
-            
-            
-            
-            
-                    </div>
-            
-                    <div class="product-card">
-            
-            
-                        <div class="product-card__left-container">
-                            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
-                            <p class="product-card__name">Round Shelf</p>
-                        </div>
-            
-                        <div class="product-card__right-container">
-                            <p>$ 120,00</p>
-                            <span class="close-icon"></span>
-                        </div>
-            
-            
-            
-            
-                    </div>
-            
-                    <div class="product-card">
-            
-            
-                        <div class="product-card__left-container">
-                            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
-                            <p class="product-card__name">Round Shelf</p>
-                        </div>
-            
-                        <div class="product-card__right-container">
-                            <p>$ 120,00</p>
-                            <span class="close-icon"></span>
-                        </div>
-            
-            
-            
-            
-                    </div>
-            
-                    <div class="product-card">
-            
-            
-                        <div class="product-card__left-container">
-                            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
-                            <p class="product-card__name">Round Shelf</p>
-                        </div>
-            
-                        <div class="product-card__right-container">
-                            <p>$ 120,00</p>
-                            <span class="close-icon"></span>
-                        </div>
-            
-            
-            
-            
-                    </div>
-            
-                    <div class="product-card">
-            
-            
-                        <div class="product-card__left-container">
-                            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
-                            <p class="product-card__name">Round Shelf</p>
-                        </div>
-            
-                        <div class="product-card__right-container">
-                            <p>$ 120,00</p>
-                            <span class="close-icon"></span>
-                        </div>
-            
-            
-            
-            
-                    </div>
-            
-            
-                    <div class="total-price">
-                        <div
-                            class="total-price__final-price">
-                            <p>Total</p>
-                            <p>$ 560.00</p>
-                        </div>
-            
-                        <input class="primary-button"
-                            value="Checkout" type="submit">
-                    </div>
-        </div>
-    </div>
-    <!-- Categories versión mobile oculto-->
-    <div class="categories-mobile hidden" id="menuMobile">
-        <span class="close-icon" id="closeIconCategories"></span>
-        <nav class="nav-mobile">
-            <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
-            <ul class="flex flex-col gap-9 nav-mobile__list">
-                <li class="nav-mobile__item"><a href="#">All</a></li>
-                <li class="nav-mobile__item"><a href="#">Clothes</a></li>
-                <li class="nav-mobile__item"><a href="#">Electronics</a></li>
-                <li class="nav-mobile__item"><a href="#">Furniture</a></li>
-                <li class="nav-mobile__item"><a href="#">Toys</a></li>
-                <li class="nav-mobile__item"><a href="#">Others</a></li>
-            </ul>
-
-        </nav>
-        <div class="hidden">
-            <li class="nav-mobile__item"><a href="#">My orders</a></li>
-            <li class="nav-mobile__item"><a href="#">My account</a></li>
-            <li>
-                <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
-            </li>
-        </div>
-        <a class="menu-desktop__item--primary-color" href="#" id="logInAnchor">Log in</a>
-    </div>
+          <div class="product-card__right-container">
+              <p id="priceProduct">$ 120,00</p>
+              <span class="close-icon"></span>
+          </div>
 
 
-    
-    <script src="./js/index.js"></script>
+
+
+      </div>
+
+      <div class="product-card">
+
+
+          <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
+              <p class="product-card__name">Round Shelf</p>
+          </div>
+
+          <div class="product-card__right-container">
+              <p id="priceProduct">$ 120,00</p>
+              <span class="close-icon"></span>
+          </div>
+
+
+
+
+      </div>
+
+      <div class="product-card">
+
+
+          <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
+              <p class="product-card__name">Round Shelf</p>
+          </div>
+
+          <div class="product-card__right-container">
+              <p id="priceProduct">$ 120,00</p>
+              <span class="close-icon"></span>
+          </div>
+
+
+
+
+      </div>
+
+      <div class="product-card">
+
+
+          <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
+              <p class="product-card__name">Round Shelf</p>
+          </div>
+
+          <div class="product-card__right-container">
+              <p id="priceProduct">$ 120,00</p>
+              <span class="close-icon"></span>
+          </div>
+
+
+
+
+      </div>
+
+      <div class="product-card">
+
+
+          <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto">
+              <p class="product-card__name">Round Shelf</p>
+          </div>
+
+          <div class="product-card__right-container">
+              <p id="priceProduct">$ 120,00</p>
+              <span class="close-icon"></span>
+          </div>
+
+
+
+
+      </div>
+
+
+      <div class="total-price">
+          <div
+              class="total-price__final-price">
+              <p>Total</p>
+              <p>$ 560.00</p>
+          </div>
+
+          <input class="primary-button"
+              value="Checkout" type="submit">
+      </div>
+  </div>
+
+  <main class="contenido" id="formContainer">
+      <div class="titulo">
+        <a href="./index.html">
+          <img src="./Images/icon_close.png" alt="icono-cerrar" id="closeIconLogin">
+        </a>
+          
+          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale">
+      </div>
+      <form class="email">
+          <label>Email address</label>
+          <input type="email" placeholder="platzi@example.com" id="inputEmail">
+          <label>Passsword</label>
+          <input type="text" value="************" id="inputPassword">
+          <button id="logInButton">Log in</button>
+          <a href="./password_recovery.html">Forgot my password</a>
+      </form>
+      <div class="sign-up">
+          <button>Sign up</button>
+      </div>
+  </main>
+</div>
+
+
+<script src="js/login.js"></script>
 </body>
-
 </html>
