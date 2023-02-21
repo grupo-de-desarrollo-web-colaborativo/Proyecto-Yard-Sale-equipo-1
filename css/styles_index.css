@@ -138,10 +138,11 @@ header {
   background-color: #acd9b2;
   border-radius: 50%;
   border: 1px solid #acd9b2;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   position: relative;
-  right: 6px;
+  right: 10px;
+  bottom: 3px;
 }
 
 .header_derecha a:nth-child(1) {

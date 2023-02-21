@@ -1,5 +1,6 @@
 const API = "https://api.escuelajs.co/api/v1/products";
 const productsList = null || document.querySelector('#productsSection');
+let productsArray = [];
 
 async function fetchData(urlApi) {
   const response = await fetch(urlApi);
@@ -7,7 +8,6 @@ async function fetchData(urlApi) {
   return data;
 }
 
-let productsArray = [];
 
 const printProducts = async function () {
   try {
@@ -39,48 +39,3 @@ printProducts();
 
 console.log(productsArray);
 
-
-const cart = document.querySelector('#cardsContainer');
-let total = [];
-//agrego un tiempo para que pueda cargar el icono de add to cart
-let iconAdd;
-setTimeout(() => {
-  iconAdd = document.querySelectorAll('.iconAdd');
-  iconAdd = [...iconAdd];
-  iconAdd.forEach(element => {
-    element.addEventListener('click', (event) => { 
-    let currentId = parseInt(event.target.id);
-    console.log(currentId);
-    
-    let currentProduct = productsArray[0].find(product => product.id == currentId);
-    console.log(currentProduct);
-
-
-    cart.innerHTML += `
-      <div class="product-card">
-        <div class="product-card__left-container">
-          <img class="product-card__img" src="${currentProduct.images[0]}" alt="${currentProduct.title}" />
-          <p class="product-card__name">${currentProduct.title}</p>
-        </div>
-
-        <div class="product-card__right-container">
-          <p id="priceProduct1">$${currentProduct.price}</p>
-          <span class="close-icon"></span>
-        </div>
-      </div>
-    `
-    total.push(currentProduct.price);
-    calculateTotalPrice();
-    });
-  });
-}, 2000);
-
-const pTotal = document.querySelector('#totalPrice');
-
-
-function calculateTotalPrice() {
-  let totalPrice;
-  total.reduce((current, item) => totalPrice = current + item, 0);
-  pTotal.textContent = `$ ${totalPrice}`;
-}
-  
