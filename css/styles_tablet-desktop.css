@@ -35,6 +35,11 @@
   .button button {
     margin-top: 35px;
   }
+
+  /* categories mobile */
+  .categories-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {

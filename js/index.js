@@ -24,7 +24,7 @@ cartIcon.addEventListener('click', () => {
 const signIn = document.querySelector('#signIn');
 const menuSignIng = document.querySelector('#menuSignIn');
 
-signIn.addEventListener('click', () => {
-  toggleOpenClose(menuSignIng);
+// signIn.addEventListener('click', () => {
+//   toggleOpenClose(menuSignIng);
   
-});
+// });

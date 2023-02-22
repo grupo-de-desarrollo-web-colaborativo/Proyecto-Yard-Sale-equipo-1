@@ -35,71 +35,33 @@
           <div class="carrito_compra_punto"></div>
         </div>
       </header>
+      <!-- checkout  -->
       <div class="shopping-cart hidden" id="checkout">
-        <div class="product-card">
-          <div class="product-card__left-container">
-            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
-            <p class="product-card__name">Round Shelf</p>
-          </div>
-
-          <div class="product-card__right-container">
-            <p id="priceProduct">$ 120,00</p>
-            <span class="close-icon"></span>
-          </div>
+        <div class="shopping-cart__title-container">
+          <span class="shopping-cart__arrow-left"></span>
+          <h3 class="shopping-cart__title">Shopping cart</h3>
         </div>
-
-        <div class="product-card">
-          <div class="product-card__left-container">
-            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
-            <p class="product-card__name">Round Shelf</p>
-          </div>
-
-          <div class="product-card__right-container">
-            <p id="priceProduct">$ 120,00</p>
-            <span class="close-icon"></span>
-          </div>
+        
+        <div class="shopping-cart__cards-container" id="cardsContainer">
+          <!-- <div class="product-card">
+            <div class="product-card__left-container">
+              <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
+              <p class="product-card__name">Round Shelf</p>
+            </div>
+  
+            <div class="product-card__right-container">
+              <p id="priceProduct1">$ 120,00</p>
+              <span class="close-icon"></span>
+            </div>
+          </div> -->
+          
         </div>
-
-        <div class="product-card">
-          <div class="product-card__left-container">
-            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
-            <p class="product-card__name">Round Shelf</p>
-          </div>
-
-          <div class="product-card__right-container">
-            <p id="priceProduct">$ 120,00</p>
-            <span class="close-icon"></span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card__left-container">
-            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
-            <p class="product-card__name">Round Shelf</p>
-          </div>
-
-          <div class="product-card__right-container">
-            <p id="priceProduct">$ 120,00</p>
-            <span class="close-icon"></span>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card__left-container">
-            <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
-            <p class="product-card__name">Round Shelf</p>
-          </div>
-
-          <div class="product-card__right-container">
-            <p id="priceProduct">$ 120,00</p>
-            <span class="close-icon"></span>
-          </div>
-        </div>
+        
 
         <div class="total-price">
           <div class="total-price__final-price">
             <p>Total</p>
-            <p>$ 560.00</p>
+            <p id="totalPrice">$ 0</p>
           </div>
 
           <input class="primary-button" value="Checkout" type="submit" />
@@ -129,5 +91,6 @@
     </div>
 
     <script src="js/login.js"></script>
+    <script src="js/addToCart.js"></script>
   </body>
 </html>
