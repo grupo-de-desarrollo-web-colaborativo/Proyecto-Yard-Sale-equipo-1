@@ -37,8 +37,14 @@ setTimeout(() => {
     total.push(currentProduct.price);
     
     calculateTotalPrice();
+    //cambiando el icono de add to cart a added to cart
+      let currentCart = document.getElementById(`${currentProduct.id}`);
+      currentCart.src = "./assets/icons/bt_added_to_cart.svg";
+      
 
-    deleteIcon = document.querySelectorAll('.delete-icon');
+    //eleminando el producto del shopping cart
+    function deleteFromCart() {
+      deleteIcon = document.querySelectorAll('.delete-icon');
     deleteIcon = [...deleteIcon];
     deleteIcon.forEach(element => {
       element.addEventListener('click', (event) => {
@@ -57,8 +63,15 @@ setTimeout(() => {
          countProducts();
          total.splice(index, 1);
          calculateTotalPrice();
+
+          //cambiando el icono de added to cart a add to cart
+        let currentCart = document.getElementById(`${currentItem}`);
+        currentCart.src = "./assets/icons/bt_add_to_cart.svg";
       })
     });
+    }
+    deleteFromCart();
+
     });
   });
 }, 2000);
@@ -75,9 +88,4 @@ function countProducts() {
 }
 
 //eliminando los productos del shopping cart
-function deleteProduct() {
-  
-  deleteIcon.addEventListener('click', (Event) => {
-    console.log(Event.target);
-  })
-}
+
