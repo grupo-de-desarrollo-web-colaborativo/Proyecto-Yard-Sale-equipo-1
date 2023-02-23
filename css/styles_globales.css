@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #acd9b2;
+  --color-primary-10: #e7e7e7;
+  --color-secondary: #ffffff;
+  --color-text: #797979;
+  --color-text-10: #c7c7c7;
+  --color-box-shadow:rgba(0, 0, 0, 0.046805);
+  --color-dark: black;
+  --color-pink:rgb(254 202 202);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
