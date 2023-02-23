@@ -27,7 +27,6 @@ cartIcon.addEventListener('click', () => {
 const paragraphPrice = document.querySelectorAll('#priceProduct');
 
 form.addEventListener('submit', logIn);
-
 document.addEventListener('DOMContentLoaded', () => {
   registerAccount = JSON.parse(localStorage.getItem('accounts')) || [];
 });
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function logIn(e) {
   e.preventDefault();
   const exist = registerAccount.some((account) => account.email === email.value && account.pass === pass.value);
-  console.log(exist);
   if (exist) {
     console.log('Login pass');
     window.location.href = 'index.html';
@@ -46,3 +44,5 @@ function logIn(e) {
     pass.value = '';
   }
 }
+
+
