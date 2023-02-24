@@ -1,32 +1,4 @@
-:root {
-  --color-primary: #acd9b2;
-  --color-primary-10: #e7e7e7;
-  --color-seconday: #ffffff;
-  --color-text: #797979;
-  --color-text-10: #c7c7c7;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Quicksand', sans-serif;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
+@import url("./styles_globales.css");
 
 .container {
   max-width: 120rem;
@@ -38,7 +10,7 @@ li {
 header {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+  box-shadow: 0px 2px 4px var(--color-box-shadow);
   height: 54px;
   padding: 12px 30px;
   width: 100%;
@@ -85,21 +57,24 @@ header {
   width: max-content;
   border: none;
   border-radius: 10px;
-  color: #c7c7c7;
+  color: var(--color-text-10);
   border: none;
   padding: 0 10px;
 }
 
 .barra_navegacion ul li:hover {
-  border: 1px solid #acd9b2;
+ border: 1px solid var(--color-primary);
 }
 
 .barra_navegacion ul li a {
   text-decoration: none;
-  color: #acd9b2;
+  color: var(--color-text-10);
   width: 100%;
   height: 100%;
   border: none;
+}
+.barra_navegacion ul li a:hover {
+  color: var(--color-primary);  
 }
 
 .barra_navegacion img {
@@ -117,11 +92,11 @@ header {
 }
 
 .header_derecha button {
-  background-color: white;
+  background-color: var(--color-secondary);
   width: max-content;
   border-radius: 10px;
   border: none;
-  color: #acd9b2;
+  color: var(--color-primary);
   height: 100%;
   width: 100%;
   font-family: 'Quicksand', sans-serif;
@@ -135,9 +110,9 @@ header {
 }
 
 .carrito_compra_punto {
-  background-color: #acd9b2;
+  background-color: var(--color-primary);
   border-radius: 50%;
-  border: 1px solid #acd9b2;
+  border: 1px solid var(--color-primary);
   width: 15px;
   height: 15px;
   position: relative;
@@ -159,7 +134,7 @@ header {
 
 .contenido {
   position: absolute;
-  background-color: white;
+  background-color: var(--color-secondary);
   bottom: 0;
   top: 0;
   right: 0;
@@ -206,10 +181,10 @@ header {
 
 .email input {
   height: 42px;
-  background: #f7f7f7;
+  background: var(--color-primary-10);
   border-radius: 10px;
   border: 1px transparent;
-  color: #797979;
+  color: var( --color-text);
   padding: 10px 8px;
   font-weight: 400;
   width: 340px;
@@ -217,10 +192,10 @@ header {
 
 .email button {
   height: 59px;
-  background: #acd9b2;
+  background: var(--color-primary);
   border-radius: 10px;
   border: 1px transparent;
-  color: white;
+  color: var(--color-secondary);
   margin-top: 42px;
   font-weight: 700;
   cursor: pointer;
@@ -246,7 +221,7 @@ header {
   flex-direction: column;
   align-items: center;
   font-weight: 500;
-  color: #acd9b2;
+  color:var(--color-primary);
   margin-top: 30px;
   text-decoration: none;
 }
@@ -260,7 +235,7 @@ header {
   width: 100%;
   height: 59px;
   border-radius: 20px;
-  color: #acd9b2;
+  color: var(--color-primary);
   background: none;
   border: 1px solid;
   font-weight: 700;
@@ -277,7 +252,7 @@ header {
   padding: 15px 20px 44px;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: var(--color-secondary);
   font-family: 'Quicksand', 'roboto';
 }
 
@@ -310,13 +285,13 @@ header {
 
 .nav-mobile__item a {
   text-decoration: none;
-  color: black;
+  color: var(--color-dark);
 }
 
 .menu-desktop__item--primary-color {
   width: max-content;
   font-size: 14px;
-  color: #acd9b2;
+  color: var(--color-primary);
   font-weight: 700;
   text-decoration: none;
 }
@@ -326,16 +301,15 @@ header {
   position: absolute;
   top: 55px;
   right: 0;
-  width: 384px;
   height: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: 'Quicksand';
-  background-color: white;
+  background-color: var(--color-secondary);
   border-radius: 5px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+  box-shadow: 0px 0px 6px var(--color-box-shadow);
 }
 
 .shopping-cart__arrow-left {
@@ -422,7 +396,7 @@ header {
   padding: 16px;
   font-weight: 700;
   border-radius: 10px;
-  background-color: #f7f7f7;
+  background-color: var(--color-primary-10);
 }
 
 .shopping-cart .total-price p:first-child {
@@ -433,8 +407,8 @@ header {
   width: 100%;
   height: 60px;
   align-self: flex-end;
-  background-color: #acd9b2;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: 700;
   border-radius: 10px;
   border: none;
@@ -450,15 +424,15 @@ header {
   height: 190px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color:var(--color-secondary);
   border-radius: 8px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+  box-shadow: 0px 0px 6px var(--color-box-shadow);
 }
 
 .menu-signIn ul {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid var( --color-text);
 }
 
 .menu-signIn .menu-signIn__item {
@@ -466,14 +440,14 @@ header {
   align-self: flex-end;
   font-size: 16px;
   font-weight: 700;
-  color: black;
+  color: var(--color-dark);
 }
 
 .menu-signIn .menu-signIn__item--primary-color {
   margin-top: 20px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #acd9b2;
+  color: var(--color-primary);
 }
 
 /* le agregue un clase hidden con el display none */
@@ -508,7 +482,7 @@ header {
 }
 
 .search {
-  background-color: #f7f7f7f7;
+  background-color: var( --color-primary-10);
   display: flex;
   align-items: center;
   width: 339px;
@@ -558,7 +532,7 @@ header {
   border: none;
   border-radius: 10px;
   width: 100%;
-  color: var(--color-seconday);
+  color: var(--color-secondary);
   padding: 18px 119px;
   font-weight: bold;
   font-size: 18px;
@@ -634,7 +608,7 @@ header {
   position: absolute;
   top: 55px;
   right: 0;
-  background-color: var(--color-seconday);
+  background-color: var(--color-secondary);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
   border-radius: 0 0 5px 5px;
 }
