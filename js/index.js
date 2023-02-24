@@ -28,3 +28,23 @@ const menuSignIng = document.querySelector('#menuSignIn');
 //   toggleOpenClose(menuSignIng);
 
 // });
+let userSesion = {};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  user = JSON.parse(localStorage.getItem('user'));
+  userSession(user)
+});
+
+function userSession(user) {
+  const { name, email, active } = user;
+  const txtEmail = document.querySelector('.header_derecha button')
+  // active = false;
+  // const userAccount = JSON.stringify({ name, email, active });
+  // localStorage.setItem('user', userAccount);
+  if (active) {
+    txtEmail.textContent = email;
+  } else {
+    console.log('closed sesion');
+  }
+}
