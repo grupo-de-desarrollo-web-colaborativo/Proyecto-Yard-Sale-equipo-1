@@ -26,5 +26,5 @@ const menuSignIng = document.querySelector('#menuSignIn');
 
 // signIn.addEventListener('click', () => {
 //   toggleOpenClose(menuSignIng);
-  
+
 // });
