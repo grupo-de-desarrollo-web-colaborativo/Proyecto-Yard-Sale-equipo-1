@@ -4,7 +4,6 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
 /*Aca inician las propiedades del lado izquierdo del header*/
 header {
   display: flex;
@@ -14,34 +13,28 @@ header {
   padding: 12px 30px;
   width: 100%;
 }
-
 .header_izquierda {
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
-
 .logo_header {
   display: flex;
   width: 20%;
 }
-
 .logo_header img {
   width: 100%;
   height: 100%;
 }
-
 .logo_header a:nth-child(2) {
   display: none;
 }
-
 .barra_navegacion {
   width: 80%;
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
 }
-
 .barra_navegacion ul {
   list-style: none;
   display: inline-flex;
@@ -51,7 +44,6 @@ header {
   width: 80%;
   display: none;
 }
-
 .barra_navegacion ul li {
   width: max-content;
   border: none;
@@ -60,11 +52,9 @@ header {
   border: none;
   padding: 0 10px;
 }
-
 .barra_navegacion ul li:hover {
   border: 1px solid var(--color-primary);
 }
-
 .barra_navegacion ul li a {
   text-decoration: none;
   color: var(--color-text-10);
@@ -72,25 +62,21 @@ header {
   height: 100%;
   border: none;
 }
-
 .barra_navegacion ul li a:hover {
   color: var(--color-primary);
 }
-
 .barra_navegacion img {
   display: flex;
   width: 100px;
   height: 100%;
   margin: 0 auto;
 }
-
 /*Aca inician las propiedades del lado derecho del header*/
 .header_derecha {
   display: flex;
   justify-content: flex-end;
   width: 20%;
 }
-
 .header_derecha button {
   background-color: var(--color-secondary);
   width: max-content;
@@ -103,12 +89,10 @@ header {
   font-weight: 700;
   cursor: pointer;
 }
-
 .header_derecha img {
   height: 100%;
   margin-left: 10px;
 }
-
 .carrito_compra_punto {
   background-color: var(--color-primary);
   border-radius: 50%;
@@ -118,18 +102,15 @@ header {
   position: relative;
   right: 6px;
 }
-
 .header_derecha a:nth-child(1) {
   display: none;
 }
-
 /*Desde acá inician las propiedades del main, todo el cuerpo de la página*/
 .contenedor_contenido {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-
 .contenido {
   display: flex;
   flex-direction: column;
@@ -140,7 +121,6 @@ header {
   margin: 0 auto;
   font-family: 'Quicksand', sans-serif;
 }
-
 .email {
   display: flex;
   flex-direction: column;
@@ -149,7 +129,6 @@ header {
   width: 340px;
   margin-bottom: 270px;
 }
-
 .email input {
   width: 100%;
   height: 42px;
@@ -161,7 +140,6 @@ header {
   font-weight: 400;
   font-size: 16px;
 }
-
 .email p:nth-child(1) {
   font-weight: 700;
   font-size: 18px;
@@ -169,33 +147,28 @@ header {
   margin-top: 34px;
   margin-bottom: 48px;
 }
-
 .email label:nth-child(2) {
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 14px;
 }
-
 .email label:nth-child(4) {
   font-weight: 700;
   font-size: 14px;
   margin-top: 24px;
   margin-bottom: 6px;
 }
-
 .email label:nth-child(6) {
   font-weight: 700;
   font-size: 14px;
   margin-top: 24px;
   margin-bottom: 6px;
 }
-
 .button {
   width: 340px;
   height: 59px;
   align-self: center;
 }
-
 .button button {
   width: 100%;
   height: 60px;
@@ -214,17 +187,4 @@ header {
   color: var(--color-secondary) !important;
   font-size: 14px;
   border-radius: 8px;
-}
-
-.success {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #45d767;
-  color: #ffff;
-  height: 48px;
-  padding: 0 40px;
-  line-height: 1;
-  border-radius: 1rem;
-  margin-top: 0.625rem;
 }

@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/styles_create_account.css" />
-  <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
-  <title>Yard Sale</title>
-</head>
-
-<body>
-  <div class="contenedor_contenido">
-    <header class="header">
-      <div class="header_izquierda">
-        <div class="logo_header">
-          <a href="./pagina_construccion.html"><img src="./Images/icon_menu.svg" alt="icono_menu" /></a>
-          <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles_create_account.css" />
+    <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
+    <title>Yard Sale</title>
+  </head>
+  <body>
+    <div class="contenedor_contenido">
+      <header class="header">
+        <div class="header_izquierda">
+          <div class="logo_header">
+            <a href="./pagina_construccion.html"><img src="./Images/icon_menu.svg" alt="icono_menu" /></a>
+            <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
+          </div>
+          <nav class="barra_navegacion">
+            <ul>
+              <li><a href="./pagina_construccion.html">All</a></li>
+              <li><a href="./pagina_construccion.html">Clothes</a></li>
+              <li><a href="./pagina_construccion.html">Electronis</a></li>
+              <li><a href="./pagina_construccion.html">Furniture</a></li>
+              <li><a href="./pagina_construccion.html">Toys</a></li>
+              <li><a href="./pagina_construccion.html">Others</a></li>
+            </ul>
+            <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+          </nav>
         </div>
-        <nav class="barra_navegacion">
-          <ul>
-            <li><a href="./pagina_construccion.html">All</a></li>
-            <li><a href="./pagina_construccion.html">Clothes</a></li>
-            <li><a href="./pagina_construccion.html">Electronis</a></li>
-            <li><a href="./pagina_construccion.html">Furniture</a></li>
-            <li><a href="./pagina_construccion.html">Toys</a></li>
-            <li><a href="./pagina_construccion.html">Others</a></li>
-          </ul>
-          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
-        </nav>
-      </div>
-      <div class="header_derecha">
-        <a href="./login.html"><button>Sign In</button></a>
-        <a href="./pagina_construccion.html"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
-        <div class="carrito_compra_punto"></div>
-      </div>
-    </header>
-    <main class="contenido">
-      <form class="email" id="form">
-        <p>My account</p>
-        <label>Name</label>
-        <input type="text" placeholder="Camila Tokoo" id="name" />
-        <label>Email address</label>
-        <input type="email" placeholder="camilayokoo@gmail.com" id="email" />
-        <label>Passsword</label>
-        <input type="password" placeholder="************" id="password" />
-      </form>
-      <div class="button" id="btn-create">
-        <button>Create</button>
-      </div>
-    </main>
-  </div>
-  <script type="module" src="./js/sign-up.js"></script>
-</body>
-
+        <div class="header_derecha">
+          <a href="./login.html"><button>Sign In</button></a>
+          <a href="./pagina_construccion.html"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
+          <div class="carrito_compra_punto"></div>
+        </div>
+      </header>
+      <main class="contenido">
+        <form class="email" id="form">
+          <p>My account</p>
+          <label>Name</label>
+          <input type="text" placeholder="Camila Tokoo" id="name" />
+          <label>Email address</label>
+          <input type="email" placeholder="camilayokoo@gmail.com" id="email" />
+          <label>Passsword</label>
+          <input type="password" placeholder="************" id="password" />
+        </form>
+        <div class="button" id="btn-create">
+          <button>Create</button>
+        </div>
+      </main>
+    </div>
+    <script src="./js/sign-up.js"></script>
+  </body>
 </html>

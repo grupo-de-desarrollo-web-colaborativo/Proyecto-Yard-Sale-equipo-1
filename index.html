@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles_index.css" />
+    <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
+    <title>Yard Sale</title>
+    <script defer src="./js/getProducts.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/styles_index.css" />
-  <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
-  <title>Yard Sale</title>
-  <script defer src="./js/getProducts.js"></script>
-</head>
-
-<body>
-  <!-- Maquetado del header y login por Carlos -->
-  <!-- <div class="contenedor_contenido"> -->
-  <header class="header" id="header">
-    <div class="header_izquierda">
-      <div class="logo_header">
-        <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon" /></a>
-        <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
-      </div>
-      <nav class="barra_navegacion">
-        <ul>
-          <li><a href="./pagina_construccion.html">All</a></li>
-          <li><a href="./pagina_construccion.html">Clothes</a></li>
-          <li><a href="./pagina_construccion.html">Electronis</a></li>
-          <li><a href="./pagina_construccion.html">Furniture</a></li>
-          <li><a href="./pagina_construccion.html">Toys</a></li>
-          <li><a href="./pagina_construccion.html">Others</a></li>
-        </ul>
-        <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
-      </nav>
-    </div>
-    <div class="header_derecha">
-      <a href="./login.html" id="signIn"><button>Sign In</button></a>
-      <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
-      <div class="carrito_compra_punto"></div>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="products">
-      <div class="search">
-        <img src="./assets/icons/magnifying_glass.png" alt="" class="search__logo" />
-        <input class="search__input" type="search" name="" id="" placeholder="Search product" />
-      </div>
-      <div class="product__nav">
-        <ul class="nav__list nav__list--categories">
-          <li class="nav__item"><a class="btn nav__link btn-link btn--transparent" href="#">All</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Clothes</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Electronics</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Furniture</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Toys</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Others</a></li>
-        </ul>
-
-        <div class="product__filter">
-          <label for="orders">Order:</label>
-          <select name="orders" id="order">
-            <option value="most-recent">Most recent</option>
-          </select>
+  <body>
+    <!-- Maquetado del header y login por Carlos -->
+    <!-- <div class="contenedor_contenido"> -->
+      <header class="header" id="header">
+        <div class="header_izquierda">
+          <div class="logo_header">
+            <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon" /></a>
+            <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
+          </div>
+          <nav class="barra_navegacion">
+            <ul>
+              <li><a href="./pagina_construccion.html">All</a></li>
+              <li><a href="./pagina_construccion.html">Clothes</a></li>
+              <li><a href="./pagina_construccion.html">Electronis</a></li>
+              <li><a href="./pagina_construccion.html">Furniture</a></li>
+              <li><a href="./pagina_construccion.html">Toys</a></li>
+              <li><a href="./pagina_construccion.html">Others</a></li>
+            </ul>
+            <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+          </nav>
         </div>
-      </div>
-    </div>
-    <section class="products-list" id="productsSection">
-      <!-- <div class="card">
+        <div class="header_derecha">
+          <a href="./login.html" id="signIn"><button>Sign In</button></a>
+          <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
+          <div class="carrito_compra_punto"></div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="products">
+          <div class="search">
+            <img src="./assets/icons/magnifying_glass.png" alt="" class="search__logo" />
+            <input class="search__input" type="search" name="" id="" placeholder="Search product" />
+          </div>
+          <div class="product__nav">
+            <ul class="nav__list nav__list--categories">
+              <li class="nav__item"><a class="btn nav__link btn-link btn--transparent" href="#">All</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Clothes</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Electronics</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Furniture</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Toys</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Others</a></li>
+            </ul>
+
+            <div class="product__filter">
+              <label for="orders">Order:</label>
+              <select name="orders" id="order">
+                <option value="most-recent">Most recent</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <section class="products-list" id="productsSection">
+          <!-- <div class="card">
             <img src="./assets/images/round_shelf.jpg" alt="" class="card__images" />
             <div class="card__content">
               <div class="card__description">
@@ -78,28 +77,28 @@
             </div>
           </div> -->
 
+          
+        </section>
+      </main>
+      <!-- menu de sign in desktop     -->
+      <div class="hidden menu-signIn" id="menuSignIn">
+        <ul>
+          <li class="menu-signIn__item"><a href="">My orders</a></li>
+          <li class="menu-signIn__item"><a href="">My account</a></li>
+        </ul>
 
-    </section>
-  </main>
-  <!-- menu de sign in desktop     -->
-  <div class="hidden menu-signIn" id="menuSignIn">
-    <ul>
-      <li class="menu-signIn__item"><a href="">My orders</a></li>
-      <li class="menu-signIn__item"><a href="">My account</a></li>
-    </ul>
+        <a href="#" class="menu-signIn__item menu-signIn__item--primary-color">Sign out</a>
+      </div>
 
-    <a href="#" class="menu-signIn__item menu-signIn__item--primary-color">Sign out</a>
-  </div>
+      <!-- checkout  -->
+      <div class="shopping-cart hidden" id="checkout">
+        <div class="shopping-cart__title-container">
+          <a href="./My_order.html"><span class="shopping-cart__arrow-left"></span></a>
+          <h3 class="shopping-cart__title">Shopping cart</h3>
+        </div>
 
-  <!-- checkout  -->
-  <div class="shopping-cart hidden" id="checkout">
-    <div class="shopping-cart__title-container">
-      <a href="./My_order.html"><span class="shopping-cart__arrow-left"></span></a>
-      <h3 class="shopping-cart__title">Shopping cart</h3>
-    </div>
-
-    <div class="shopping-cart__cards-container" id="cardsContainer">
-      <!-- <div class="product-card">
+        <div class="shopping-cart__cards-container" id="cardsContainer">
+          <!-- <div class="product-card">
             <div class="product-card__left-container">
               <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
               <p class="product-card__name">Round Shelf</p>
@@ -110,70 +109,46 @@
               <span class="close-icon"></span>
             </div>
           </div> -->
-
-
-      <!-- </div> -->
-      <!-- Categories versión mobile oculto-->
-      <div class="categories-mobile hidden" id="menuMobile">
-        <span class="close-icon" id="closeIconCategories"></span>
-        <nav class="nav-mobile">
-          <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
-          <ul class="flex flex-col gap-9 nav-mobile__list">
-            <li class="nav-mobile__item"><a href="#">All</a></li>
-            <li class="nav-mobile__item"><a href="#">Clothes</a></li>
-            <li class="nav-mobile__item"><a href="#">Electronics</a></li>
-            <li class="nav-mobile__item"><a href="#">Furniture</a></li>
-            <li class="nav-mobile__item"><a href="#">Toys</a></li>
-            <li class="nav-mobile__item"><a href="#">Others</a></li>
-          </ul>
-        </nav>
-        <div class="hidden">
-          <li class="nav-mobile__item"><a href="#">My orders</a></li>
-          <li class="nav-mobile__item"><a href="#">My account</a></li>
-          <li>
-            <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
-          </li>
+          
         </div>
-        <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
+        
+
+        <div class="total-price">
+          <div class="total-price__final-price">
+            <p>Total</p>
+            <p id="totalPrice">$ 0</p>
+          </div>
+
+          <input class="primary-button" value="Checkout" type="submit" />
+        </div>
       </div>
 
-
-      <div class="total-price">
-        <div class="total-price__final-price">
-          <p>Total</p>
-          <p id="totalPrice">$ 0</p>
-        </div>
-
-        <input class="primary-button" value="Checkout" type="submit" />
-      </div>
-    </div>
-
-  </div>
-  <!-- Categories versión mobile oculto-->
-  <div class="categories-mobile hidden" id="menuMobile">
-    <span class="close-icon" id="closeIconCategories"></span>
-    <nav class="nav-mobile">
-      <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
-      <ul class="flex flex-col gap-9 nav-mobile__list">
-        <li class="nav-mobile__item"><a href="#">All</a></li>
-        <li class="nav-mobile__item"><a href="#">Clothes</a></li>
-        <li class="nav-mobile__item"><a href="#">Electronics</a></li>
-        <li class="nav-mobile__item"><a href="#">Furniture</a></li>
-        <li class="nav-mobile__item"><a href="#">Toys</a></li>
-        <li class="nav-mobile__item"><a href="#">Others</a></li>
-      </ul>
-    </nav>
-    <div class="hidden">
-      <li class="nav-mobile__item"><a href="#">My orders</a></li>
-      <li class="nav-mobile__item"><a href="#">My account</a></li>
-      <li>
-        <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
-      </li>
-    </div>
-    <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
     <!-- </div> -->
-    <script src="./js/login.js"></script>
-    <script defer src="./js/addToCart.js"></script>
-</body>
+    <!-- Categories versión mobile oculto-->
+    <div class="categories-mobile hidden" id="menuMobile">
+      <span class="close-icon" id="closeIconCategories"></span>
+      <nav class="nav-mobile">
+        <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
+        <ul class="flex flex-col gap-9 nav-mobile__list">
+          <li class="nav-mobile__item"><a href="#">All</a></li>
+          <li class="nav-mobile__item"><a href="#">Clothes</a></li>
+          <li class="nav-mobile__item"><a href="#">Electronics</a></li>
+          <li class="nav-mobile__item"><a href="#">Furniture</a></li>
+          <li class="nav-mobile__item"><a href="#">Toys</a></li>
+          <li class="nav-mobile__item"><a href="#">Others</a></li>
+        </ul>
+      </nav>
+      <div class="hidden">
+        <li class="nav-mobile__item"><a href="#">My orders</a></li>
+        <li class="nav-mobile__item"><a href="#">My account</a></li>
+        <li>
+          <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
+        </li>
+      </div>
+      <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
+    </div>
 
+    <script src="./js/index.js"></script>
+    <script defer src="./js/addToCart.js"></script>
+  </body>
 </html>
