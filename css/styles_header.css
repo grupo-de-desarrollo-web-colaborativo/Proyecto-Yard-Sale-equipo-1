@@ -96,6 +96,7 @@ header {
 .header_derecha img {       
   height: 100%;       
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .carrito_compra_punto {
