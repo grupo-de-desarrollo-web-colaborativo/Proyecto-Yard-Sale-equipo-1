@@ -6,9 +6,11 @@
   .logo_header a:nth-child(2) {
     display: flex;
   }
-  .barra_navegacion ul {
-    display: inline-flex;
+
+  .barra_navegacion ul {  
+    display: inline-flex;             
   }
+  
   .barra_navegacion img {
     display: none;
   }

@@ -1,8 +1,5 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url("./styles_globales.css");
+
 div {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
@@ -15,18 +12,18 @@ div {
 }
 p {
     font-size: 30px;
-    color: #ACD9B2;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 button {
-    background-color: #ACD9B2;
+    background-color: var(--color-primary);
     height: 50px;
     width: 200px;
-    color: white;
+    color:var(--color-secondary);
     border-radius: 20px;
-    border: #ACD9B2;
+    border: var(--color-primary);
 }
-a :hover {
-    background-color: white;    
-    color:#ACD9B2;       
+a:hover {
+    background-color: var(--color-secondary);    
+    color:var(--color-primary);       
 }
