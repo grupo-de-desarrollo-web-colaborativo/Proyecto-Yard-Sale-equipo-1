@@ -22,7 +22,6 @@
   /*Aca inician propiedades al main*/
   .contenido {
     /*edité el contenedor main para centrarlo en la vista desktop*/
-    position: initial;
     justify-content: center;
     background-color: transparent;
   }
