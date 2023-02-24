@@ -486,7 +486,7 @@
   top: 47px;
   right: 0;
   background-color: var(--color-secondary);
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+  box-shadow: 0px 0px 6px var(--color-box-shadow);
   border-radius: 0 0 5px 5px;
 }
 
@@ -497,7 +497,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--color-secondary);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -548,7 +548,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 3.5rem;
-  color: #ffffff;
+  color: var(--color-secondary);
   justify-content: center;
   align-items: center;
   width: 100%;
