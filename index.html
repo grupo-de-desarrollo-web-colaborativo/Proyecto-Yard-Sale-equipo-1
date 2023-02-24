@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="./css/styles_index.css" />
   <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
   <title>Yard Sale</title>
-  <script defer src="./js/getProducts.js"></script>
 </head>
 
 <body>
@@ -76,10 +75,27 @@
               </div>
               <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" />
             </div>
-          </div> -->
-
-
+          </div> -->    
     </section>
+
+      <div class="hidden product-details" id="DetailsContainer">
+        <!-- <div class="product-details__close-icon-container" id="detailsClose">
+          <img src="./assets/icons/icon_close.png" alt="" class="product-details__close-icon" />
+        </div>
+        <img id="detailsImage" class="product-details__img" src="../assets/images/fridge.jpg" alt="" />
+        <div class="product-details__info-container">
+          <div class="product-details__info">
+            <p id="detailsPrice" class="product-details__price">$0</p>
+            <p id="detailsName" class="product-details__name">fridge</p>
+            <p id="detailsDescription" class="product-details__description">
+              description
+            </p>
+            <button id="detailsCartButton" class="product-details__button">
+              <img src="./assets/icons/Shape.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </div> -->
+      </div>
   </main>
   <!-- menu de sign in desktop     -->
   <div class="hidden menu-signIn" id="menuSignIn">
@@ -110,33 +126,7 @@
               <span class="close-icon"></span>
             </div>
           </div> -->
-
-
-      <!-- </div> -->
-      <!-- Categories versión mobile oculto-->
-      <div class="categories-mobile hidden" id="menuMobile">
-        <span class="close-icon" id="closeIconCategories"></span>
-        <nav class="nav-mobile">
-          <p class="mt-2 mb-9 nav-mobile__title">CATEGORIES</p>
-          <ul class="flex flex-col gap-9 nav-mobile__list">
-            <li class="nav-mobile__item"><a href="#">All</a></li>
-            <li class="nav-mobile__item"><a href="#">Clothes</a></li>
-            <li class="nav-mobile__item"><a href="#">Electronics</a></li>
-            <li class="nav-mobile__item"><a href="#">Furniture</a></li>
-            <li class="nav-mobile__item"><a href="#">Toys</a></li>
-            <li class="nav-mobile__item"><a href="#">Others</a></li>
-          </ul>
-        </nav>
-        <div class="hidden">
-          <li class="nav-mobile__item"><a href="#">My orders</a></li>
-          <li class="nav-mobile__item"><a href="#">My account</a></li>
-          <li>
-            <a class="menu-desktop__email">edwinmiguelorellana@gmail.com</a>
-          </li>
-        </div>
-        <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
-      </div>
-
+    </div>      
 
       <div class="total-price">
         <div class="total-price__final-price">
@@ -146,9 +136,9 @@
 
         <input class="primary-button" value="Checkout" type="submit" />
       </div>
-    </div>
-
   </div>
+
+  <!-- </div> -->
   <!-- Categories versión mobile oculto-->
   <div class="categories-mobile hidden" id="menuMobile">
     <span class="close-icon" id="closeIconCategories"></span>
@@ -171,9 +161,9 @@
       </li>
     </div>
     <a class="menu-desktop__item--primary-color" href="./login.html" id="logInAnchor">Log in</a>
-    <!-- </div> -->
-    <script src="./js/login.js"></script>
-    <script defer src="./js/addToCart.js"></script>
-</body>
+  </div>
 
+  <script defer src="./js/index.js"></script>
+  <script defer src="./js/getProducts.js"></script>
+</body>
 </html>

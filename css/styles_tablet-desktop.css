@@ -40,7 +40,12 @@
   .categories-mobile {
     display: none;
   }
+
+  .nav__list {
+    display: none;
+  }
 }
+
 
 @media (min-width: 1024px) {
   .nav__list--categories {
