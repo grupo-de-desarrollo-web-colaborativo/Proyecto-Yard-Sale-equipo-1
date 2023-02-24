@@ -246,7 +246,7 @@
 }
 
 .product-card .close-icon {
-  background-image: url("./assets/icons/icon_close.png");
+  background-image: url("../assets/icons/icon_close.png");
   width: 15px;
   height: 15px;
   background-position: center;
