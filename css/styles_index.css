@@ -175,9 +175,10 @@
 /*estilos del checkout -Edwin*/
 .shopping-cart {
   position: absolute;
-  top: 55px;
+  top: 51px;
   right: 0;
   height: auto;
+  width: 384px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -261,12 +262,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .total-price .total-price__final-price {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
   height: 76px;
   align-items: center;
   padding: 16px;
@@ -482,7 +483,7 @@
   width: 384px;
   height: 718px;
   position: absolute;
-  top: 55px;
+  top: 47px;
   right: 0;
   background-color: var(--color-secondary);
   box-shadow: 0px 0px 6px var(--color-box-shadow);

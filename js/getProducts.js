@@ -6,6 +6,8 @@ let iconsAdd;
 let productsImages;
 let cartProducts = [];
 
+const productsCount = document.querySelector('.carrito_compra_punto');
+
 async function fetchData(urlApi) {
   const response = await fetch(urlApi);
   const data = await response.json();
@@ -53,7 +55,8 @@ async function printProducts() {
   iconsAdd = [...iconsAdd];
   iconsAdd.forEach(element => {
     element.addEventListener('click', (event) => {
-    addToCart(event);
+      productsCount.classList.remove('hidden');
+      addToCart(event);
     })
   });
 };
@@ -101,20 +104,21 @@ function showDetails(e) {
 //agrega el producto al shopping cart
 const cart = document.querySelector('#cardsContainer');
 const pTotal = document.querySelector('#totalPrice');
-const productsCount = document.querySelector('.carrito_compra_punto');
 
 
 let pricesArray = [];
 let deleteIcons;
 let eventAdd = [];
+
+
+
 function addToCart(e) {
   eventAdd.push(e);
   //cambiando el icono de add to cart a added to cart
   e.target.src = "./assets/icons/bt_added_to_cart.svg";
-
+  
   let currentId = parseInt(e.target.id);
   let currentProduct = productsArray.find((product) => product.id == currentId);
-  console.log(currentProduct);
 
   cartProducts.push(currentProduct);
 
