@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles_index.css" />
-    <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
-    <title>Login</title>
-  </head>
-  <body>
-    <!-- Maquetado del header y login por Carlos -->
-    <div class="contenedor_contenido">
-      <header class="header" id="header">
-        <div class="header_izquierda">
-          <div class="logo_header">
-            <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon" /></a>
-            <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
-          </div>
-          <nav class="barra_navegacion">
-            <ul>
-              <li><a href="./pagina_construccion.html">All</a></li>
-              <li><a href="./pagina_construccion.html">Clothes</a></li>
-              <li><a href="./pagina_construccion.html">Electronis</a></li>
-              <li><a href="./pagina_construccion.html">Furniture</a></li>
-              <li><a href="./pagina_construccion.html">Toys</a></li>
-              <li><a href="./pagina_construccion.html">Others</a></li>
-            </ul>
-            <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
-          </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles_index.css" />
+  <link rel="stylesheet" href="./css/styles_tablet-desktop.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <!-- Maquetado del header y login por Carlos -->
+  <div class="contenedor_contenido">
+    <header class="header" id="header">
+      <div class="header_izquierda">
+        <div class="logo_header">
+          <a href="#"><img src="./Images/icon_menu.svg" alt="icono_menu" id="menuMobileIcon" /></a>
+          <a href="./login.html"><img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" /></a>
         </div>
-        <div class="header_derecha">
-          <a href="./login.html" id="signIn"><button>Sign In</button></a>
-          <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
-          <div class="carrito_compra_punto"></div>
-        </div>
-      </header>
-      <!-- checkout  -->
-      <div class="shopping-cart hidden" id="checkout">
-        <div class="shopping-cart__title-container">
-          <span class="shopping-cart__arrow-left"></span>
-          <h3 class="shopping-cart__title">Shopping cart</h3>
-        </div>
-        
-        <div class="shopping-cart__cards-container" id="cardsContainer">
-          <!-- <div class="product-card">
+        <nav class="barra_navegacion">
+          <ul>
+            <li><a href="./pagina_construccion.html">All</a></li>
+            <li><a href="./pagina_construccion.html">Clothes</a></li>
+            <li><a href="./pagina_construccion.html">Electronis</a></li>
+            <li><a href="./pagina_construccion.html">Furniture</a></li>
+            <li><a href="./pagina_construccion.html">Toys</a></li>
+            <li><a href="./pagina_construccion.html">Others</a></li>
+          </ul>
+          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+        </nav>
+      </div>
+      <div class="header_derecha">
+        <a href="./login.html" id="signIn"><button>Sign In</button></a>
+        <a id="shoppingCartIcon"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras" /></a>
+        <div class="carrito_compra_punto"></div>
+      </div>
+    </header>
+    <!-- checkout  -->
+    <div class="shopping-cart hidden" id="checkout">
+      <div class="shopping-cart__title-container">
+        <span class="shopping-cart__arrow-left"></span>
+        <h3 class="shopping-cart__title">Shopping cart</h3>
+      </div>
+
+      <div class="shopping-cart__cards-container" id="cardsContainer">
+        <!-- <div class="product-card">
             <div class="product-card__left-container">
               <img class="product-card__img" src="./Images/round_shelf.jpg" alt="foto del producto" />
               <p class="product-card__name">Round Shelf</p>
@@ -54,43 +56,44 @@
               <span class="close-icon"></span>
             </div>
           </div> -->
-          
-        </div>
-        
 
-        <div class="total-price">
-          <div class="total-price__final-price">
-            <p>Total</p>
-            <p id="totalPrice">$ 0</p>
-          </div>
-
-          <input class="primary-button" value="Checkout" type="submit" />
-        </div>
       </div>
 
-      <main class="contenido" id="formContainer">
-        <div class="titulo">
-          <a href="./index.html">
-            <img src="./Images/icon_close.png" alt="icono-cerrar" id="closeIconLogin" />
-          </a>
 
-          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+      <div class="total-price">
+        <div class="total-price__final-price">
+          <p>Total</p>
+          <p id="totalPrice">$ 0</p>
         </div>
-        <form class="email" id="loginForm">
-          <label>Email address</label>
-          <input type="email" placeholder="platzi@example.com" id="loginEmail" />
-          <label>Passsword</label>
-          <input type="password" placeholder="************" id="loginPassword" />
-          <button id="logInButton" type="submit">Log in</button>
-          <a href="./password_recovery.html">Forgot my password</a>
-        </form>
-        <a href="./create_account.html" class="sign-up">
-          <button>Sign up</button>
-        </a>
-      </main>
+
+        <input class="primary-button" value="Checkout" type="submit" />
+      </div>
     </div>
 
-    <script src="js/login.js"></script>
-    <script src="js/addToCart.js"></script>
-  </body>
+    <main class="contenido" id="formContainer">
+      <div class="titulo">
+        <a href="./index.html">
+          <img src="./Images/icon_close.png" alt="icono-cerrar" id="closeIconLogin" />
+        </a>
+
+        <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale" />
+      </div>
+      <form class="email" id="loginForm">
+        <label>Email address</label>
+        <input type="email" placeholder="platzi@example.com" id="loginEmail" />
+        <label>Passsword</label>
+        <input type="password" placeholder="************" id="loginPassword" />
+        <button id="logInButton" type="submit">Log in</button>
+        <a href="./password_recovery.html">Forgot my password</a>
+      </form>
+      <a href="./create_account.html" class="sign-up">
+        <button>Sign up</button>
+      </a>
+    </main>
+  </div>
+
+  <script src="js/login.js"></script>
+  <script src="js/addToCart.js"></script>
+</body>
+
 </html>
