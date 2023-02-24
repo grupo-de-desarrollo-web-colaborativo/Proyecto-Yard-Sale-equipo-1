@@ -111,10 +111,9 @@ function addToCart(e) {
   eventAdd.push(e);
   //cambiando el icono de add to cart a added to cart
   e.target.src = "./assets/icons/bt_added_to_cart.svg";
-
+  
   let currentId = parseInt(e.target.id);
   let currentProduct = productsArray.find((product) => product.id == currentId);
-  console.log(currentProduct);
 
   cartProducts.push(currentProduct);
 
