@@ -45,11 +45,8 @@ function create() {
 
   localStorage.setItem('accounts', jsonObj);
 
-  showSuccess('account successfully created');
-  // resetForm();
-  setTimeout(() => {
-    window.location.href = 'login.html';
-  }, 3000);
+  resetForm();
+  window.location.href = 'login.html';
 }
 
 function resetForm() {
@@ -97,14 +94,4 @@ function showError(message) {
   setTimeout(() => {
     errorMessage.remove();
   }, 3000);
-}
-
-function showSuccess(message) {
-  const form = document.querySelector('#form');
-
-  const success = document.createElement('p');
-  success.classList.add('email', 'success')
-  success.textContent = message;
-
-  form.appendChild(success)
 }
