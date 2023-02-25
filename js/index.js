@@ -34,17 +34,45 @@ let userSesion = {};
 document.addEventListener('DOMContentLoaded', () => {
   user = JSON.parse(localStorage.getItem('user'));
   userSession(user)
+  const txtEmail = document.querySelector('.header_derecha button')
+  txtEmail.addEventListener('click', showSignOut)
 });
 
 function userSession(user) {
-  const { name, email, active } = user;
+  console.log(user);
+  const { id, name, email } = user;
+  const headerDerecha = document.querySelector('.header_derecha');
+
+  const active = document.querySelector('#signIn')
+  active.removeAttribute("href");
+
   const txtEmail = document.querySelector('.header_derecha button')
-  // active = false;
-  // const userAccount = JSON.stringify({ name, email, active });
-  // localStorage.setItem('user', userAccount);
-  if (active) {
-    txtEmail.textContent = email;
+  txtEmail.addEventListener('click', showSignOut)
+
+  txtEmail.textContent = email;
+  const signOutBtn = document.querySelector('.menu-signIn__item--primary-color')
+  signOutBtn.addEventListener('click', signOut);
+}
+
+function signOut() {
+  console.log('click');
+  const active = document.querySelector('#signIn')
+  active.setAttribute("href", './login.html');
+
+  const menuSignIn = document.querySelector('#menuSignIn');
+  menuSignIn.classList.add('hidden')
+
+  localStorage.clear();
+  const txtEmail = document.querySelector('.header_derecha button')
+  txtEmail.textContent = 'Sign In';
+  // window.location.href = 'index.html';
+}
+
+function showSignOut() {
+  const menuSignIn = document.querySelector('#menuSignIn');
+  if (menuSignIn.classList.contains('hidden')) {
+    menuSignIn.classList.remove('hidden')
   } else {
-    console.log('closed sesion');
+    menuSignIn.classList.add('hidden')
   }
 }
