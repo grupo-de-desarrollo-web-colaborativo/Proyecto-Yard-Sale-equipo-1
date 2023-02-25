@@ -17,7 +17,7 @@ const cartIcon = document.querySelector('#shoppingCartIcon');
 const form = document.querySelector('#loginForm');
 const email = document.querySelector('#loginEmail');
 const pass = document.querySelector('#loginPassword');
-let registerAccount = [];
+let registerAccount;
 
 cartIcon.addEventListener('click', () => {
   toggleOpenClose(checkout);
@@ -27,16 +27,18 @@ cartIcon.addEventListener('click', () => {
 const paragraphPrice = document.querySelectorAll('#priceProduct');
 
 form.addEventListener('submit', logIn);
-document.addEventListener('DOMContentLoaded', () => {
-  registerAccount = JSON.parse(localStorage.getItem('accounts')) || [];
-});
 
 // Login Functionality
 function logIn(e) {
   e.preventDefault();
-  const exist = registerAccount.some((account) => account.email === email.value && account.pass === pass.value);
+  const exist = registerAccount.some((account) => account.email === email.value && account.password === pass.value);
+
   if (exist) {
+    const userAc = registerAccount.filter(item => item.email === email.value && item.password === pass.value)
     console.log('Login pass');
+    let user = userAc[0];
+    const userAccount = JSON.stringify(user);
+    localStorage.setItem('user', userAccount);
     window.location.href = 'index.html';
   } else {
     console.log('Login fail');
@@ -45,4 +47,17 @@ function logIn(e) {
   }
 }
 
+async function getData() {
+  const res = await fetch('https://api.escuelajs.co/api/v1/users');
+  const data = await res.json();
+  return data;
+}
 
+getData().then(data => {
+  userList(data);
+})
+
+function userList(data) {
+  registerAccount = data;
+  console.log(registerAccount);
+}

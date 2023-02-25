@@ -32,30 +32,20 @@ function create() {
     return;
   }
 
+
   let account = {
-    id: Date.now(),
     name: name.value,
     email: email.value,
-    pass: pass.value,
+    password: pass.value,
+    avatar: "https://api.lorem.space/image/face?w=640&h=480&r=867",
   };
 
-  accounts = [...accounts, account];
-
-  const jsonObj = JSON.stringify(accounts);
-
-  localStorage.setItem('accounts', jsonObj);
+  createAccount(account)
 
   showSuccess('account successfully created');
-  // resetForm();
   setTimeout(() => {
     window.location.href = 'login.html';
   }, 3000);
-}
-
-function resetForm() {
-  name.value = '';
-  email.value = '';
-  pass.value = '';
 }
 
 function validEmail(email) {
@@ -107,4 +97,24 @@ function showSuccess(message) {
   success.textContent = message;
 
   form.appendChild(success)
+}
+
+async function createAccount(account) {
+
+  let url = 'https://api.escuelajs.co/api/v1/users/';
+  let data = account;
+
+  let res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  if (res.ok) {
+    let ret = await res.json();
+    console.log(JSON.parse(ret.data));
+  } else {
+    console.log(`HTTP error: ${res.status}`);
+  }
 }
