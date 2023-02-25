@@ -9,12 +9,7 @@
 }
 
 .contenido {
-  position: absolute;
   background-color: var(--color-secondary);
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   width: 100vw;

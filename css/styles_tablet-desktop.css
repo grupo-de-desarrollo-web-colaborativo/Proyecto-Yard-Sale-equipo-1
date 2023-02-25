@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+  .header {
+    display: flex;
+  }
   /*Aca inician las propiedades del header*/
   .logo_header a:nth-child(1) {
     display: none;
