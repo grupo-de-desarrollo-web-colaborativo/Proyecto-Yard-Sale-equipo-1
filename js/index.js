@@ -28,7 +28,7 @@ const menuSignIng = document.querySelector('#menuSignIn');
 //   toggleOpenClose(menuSignIng);
 
 // });
-let userSesion = {};
+let user;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function userSession(user) {
-  console.log(user);
   const { id, name, email } = user;
   const headerDerecha = document.querySelector('.header_derecha');
 
@@ -55,7 +54,6 @@ function userSession(user) {
 }
 
 function signOut() {
-  console.log('click');
   const active = document.querySelector('#signIn')
   active.setAttribute("href", './login.html');
 

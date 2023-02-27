@@ -89,16 +89,18 @@
   background-color: var(--color-pink);
   text-align: center;
   padding: 8px;
-  color: var(--color-secondary) !important;
-  font-size: 14px;
+  color: var(--color-secondary);
+  font-size: 12px;
   border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 700;
 }
 
 .success {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #45d767;
+  background-color: var(--color-green);
   color: var(--color-secondary);
   height: 48px;
   padding: 0 40px;

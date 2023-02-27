@@ -41,9 +41,9 @@ function logIn(e) {
     localStorage.setItem('user', userAccount);
     window.location.href = 'index.html';
   } else {
-    console.log('Login fail');
-    email.value = '';
-    pass.value = '';
+    showError('There was a problem logging in. Check your email and password or create an account.');
+    // email.value = '';
+    // pass.value = '';
   }
 }
 
@@ -60,4 +60,18 @@ getData().then(data => {
 function userList(data) {
   registerAccount = data;
   console.log(registerAccount);
+}
+
+function showError(message) {
+  const alert = document.querySelector('.alert');
+  if (alert) {
+    alert.remove();
+  }
+
+  const errorMessage = document.createElement('p');
+  errorMessage.classList.add('alert');
+  errorMessage.textContent = message;
+
+  const logBtn = document.querySelector('#logInButton')
+  logBtn.after(errorMessage);
 }

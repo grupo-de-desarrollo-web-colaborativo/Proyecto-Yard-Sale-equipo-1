@@ -3,6 +3,7 @@ const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#password');
 let accounts = [];
+let registerAccount;
 
 formulario.addEventListener('click', create);
 
@@ -17,7 +18,7 @@ function create() {
     return;
   }
 
-  if (!validaName(name.value)) {
+  if (!validName(name.value)) {
     showError('Check your name');
     return;
   }
@@ -40,6 +41,12 @@ function create() {
     avatar: "https://api.lorem.space/image/face?w=640&h=480&r=867",
   };
 
+  console.log(registerAccount);
+  const exist = registerAccount.some((account) => account.email === email.value);
+  if(exist) {
+    showError('this account with the email already exists')
+    return;
+  }
   createAccount(account)
 
   showSuccess('account successfully created');
@@ -54,7 +61,7 @@ function validEmail(email) {
   return res;
 }
 
-function validaName(name) {
+function validName(name) {
   const regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
   const res = regex.test(name);
   return res;
@@ -81,7 +88,7 @@ function showError(message) {
   errorMessage.classList.add('alert');
   errorMessage.textContent = message;
 
-  const content = document.querySelector('#form p');
+  const content = document.querySelector('#form');
   content.appendChild(errorMessage);
 
   setTimeout(() => {
@@ -117,4 +124,19 @@ async function createAccount(account) {
   } else {
     console.log(`HTTP error: ${res.status}`);
   }
+}
+
+async function getData() {
+  const res = await fetch('https://api.escuelajs.co/api/v1/users');
+  const data = await res.json();
+  return data;
+}
+
+getData().then(data => {
+  userList(data);
+})
+
+function userList(data) {
+  registerAccount = data;
+  console.log(registerAccount);
 }
