@@ -1,19 +1,31 @@
 const API = "https://api.escuelajs.co/api/v1/products";
-const productsList = null || document.querySelector('#productsSection');
+const productsList = document.querySelector('#productsSection');
 let products; 
 let productsArray = [];
-let iconsAdd;
-let productsImages;
 let cartProducts = [];
 
+const detailsContainer = document.querySelector('#DetailsContainer');
+const detailsCartButton = document.querySelector('#detailsCartButton');
 const productsCount = document.querySelector('.carrito_compra_punto');
+const cart = document.querySelector('#cardsContainer');
+const pTotal = document.querySelector('#totalPrice');
+const allCategories = document.querySelector('#all');
+const clothesCategory = document.querySelector('#clothes');
+const electronicsCategory = document.querySelector('#electronics');
+const furnitureCategory = document.querySelector('#furniture');
+const toysCategory = document.querySelector('#toys');
+const othersCategory = document.querySelector('#others');
+
+
+let pricesArray = [];
+let deleteIcons;
+let eventAdd = [];
 
 async function fetchData(urlApi) {
   const response = await fetch(urlApi);
   const data = await response.json();
   return data;
 }
-
 
 async function printProducts() {
   try {
@@ -30,44 +42,44 @@ async function printProducts() {
               <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" id="${product.id}" />
           </div>
       </div>
-    `).slice(0,5).join('')}
+    `).slice(0,10).join('')}
     `; 
     productsList.innerHTML = card;
   } catch(error) {
     console.log(error);
   }
 
-  productsArray.push(products.slice(0,5));
+  productsArray.push(products.slice(0,10));
   productsArray = productsArray.flat();
   console.log(productsArray);
+  listenersProducts();
+};
 
+printProducts();
+
+function listenersProducts() {
   //listener del click a la imagen de cada producto
-  productsImages = document.querySelectorAll('.productImage');
+  let productsImages = document.querySelectorAll(".productImage");
   productsImages = [...productsImages];
-  productsImages.forEach( image => 
-    image.addEventListener('click', (event) =>{
+  productsImages.forEach((image) =>
+    image.addEventListener("click", (event) => {
       showDetails(event);
     })
   );
 
   //listener del icono add to cart
-  iconsAdd = document.querySelectorAll('.iconAdd');
+  let iconsAdd = document.querySelectorAll(".iconAdd");
   iconsAdd = [...iconsAdd];
-  iconsAdd.forEach(element => {
-    element.addEventListener('click', (event) => {
-      productsCount.classList.remove('hidden');
+  iconsAdd.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      productsCount.classList.remove("hidden");
       addToCart(event);
-    })
+    });
   });
-};
 
-printProducts();
-
+}
 
 console.log(productsArray);
-
-const detailsContainer = document.querySelector('#DetailsContainer');
-const detailsCartButton = document.querySelector('#detailsCartButton');
 
 //mostrar detalles del producto 
 function showDetails(e) {
@@ -102,16 +114,6 @@ function showDetails(e) {
 }
 
 //agrega el producto al shopping cart
-const cart = document.querySelector('#cardsContainer');
-const pTotal = document.querySelector('#totalPrice');
-
-
-let pricesArray = [];
-let deleteIcons;
-let eventAdd = [];
-
-
-
 function addToCart(e) {
   eventAdd.push(e);
   //cambiando el icono de add to cart a added to cart
@@ -169,12 +171,7 @@ function deleteFromCart(e) {
   //cambiando el icono de added to cart a add to cart
   eventAdd.forEach((item) => {
     if (item.target.id ==  e.target.id) {
-
       item.target.src = "./assets/icons/bt_add_to_cart.svg";
-      // if (!findEqual) {
-      // } else {
-      //   console.log("aun esta el producto en el carrito!");
-      // }
     } 
   });
 }
@@ -188,4 +185,56 @@ function calculateTotalPrice() {
 //conteo de los productos agregados al carrito y mostrar la cantidad en el ícono shopping cart
 function countProducts() {
   productsCount.textContent = cartProducts.length;
+}
+
+allCategories.addEventListener('click', () => getCategory("All"));
+clothesCategory.addEventListener('click', () => getCategory("Clothes"));
+electronicsCategory.addEventListener('click', ()=> getCategory("Electronics"));
+furnitureCategory.addEventListener('click', ()=> getCategory("Furniture"));
+toysCategory.addEventListener('click', ()=> getCategory("Toys"));
+othersCategory.addEventListener('click', ()=> getCategory("Others"));
+
+function getCategory(categoryName) {
+  console.log(categoryName);
+  let category = [];
+  productsArray.forEach(item => {
+    if(item.category.name == categoryName) {
+      category.push(item);
+    } else if(categoryName == "All") {
+      category.push(item);
+      let showCategory = `
+      ${category.map(product => `
+        <div class="card">
+          <img src="${product.images[0]}" alt="${product.title}" class="card__images productImage" id="${product.id}" />
+            <div class="card__content">
+              <div class="card__description">
+                <p class="card__price">$ ${product.price}</p>
+                <p class="card__text" data-id="1">${product.title}</p>
+              </div>
+                <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" id="${product.id}" />
+            </div>
+        </div>
+      `).slice(0,category.length).join('')}
+      `; 
+      productsList.innerHTML = showCategory;
+    }
+
+    let showCategory = `
+      ${category.map(product => `
+        <div class="card">
+          <img src="${product.images[0]}" alt="${product.title}" class="card__images productImage" id="${product.id}" />
+            <div class="card__content">
+              <div class="card__description">
+                <p class="card__price">$ ${product.price}</p>
+                <p class="card__text" data-id="1">${product.title}</p>
+              </div>
+                <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" id="${product.id}" />
+            </div>
+        </div>
+      `).slice(0,category.length).join('')}
+      `; 
+      productsList.innerHTML = showCategory;
+  })
+  console.log(category);
+  listenersProducts();
 }
