@@ -112,7 +112,7 @@ header {
   left: -6px;
   font-size: 14px;
   font-weight: 700;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 } 
