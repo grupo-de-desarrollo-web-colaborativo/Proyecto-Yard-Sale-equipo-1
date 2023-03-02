@@ -1,3 +1,5 @@
+import { getUsers } from "./provider.js";
+
 //función de expresión que agrega o quita la clase hidden a un elemento de html en específico.//
 const toggleOpenClose = (icon) => {
   icon.classList.toggle('hidden');
@@ -31,6 +33,11 @@ form.addEventListener('submit', logIn);
 // Login Functionality
 function logIn(e) {
   e.preventDefault();
+  checkLogIn();
+}
+
+async function checkLogIn() {
+  registerAccount = await getUsers();
   const exist = registerAccount.some((account) => account.email === email.value && account.password === pass.value);
 
   if (exist) {
@@ -42,24 +49,7 @@ function logIn(e) {
     window.location.href = 'index.html';
   } else {
     showError('There was a problem logging in. Check your email and password or create an account.');
-    // email.value = '';
-    // pass.value = '';
   }
-}
-
-async function getData() {
-  const res = await fetch('https://api.escuelajs.co/api/v1/users');
-  const data = await res.json();
-  return data;
-}
-
-getData().then(data => {
-  userList(data);
-})
-
-function userList(data) {
-  registerAccount = data;
-  console.log(registerAccount);
 }
 
 function showError(message) {

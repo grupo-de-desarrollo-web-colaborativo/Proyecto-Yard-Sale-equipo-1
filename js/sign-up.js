@@ -1,15 +1,11 @@
+import { createUser, getUsers, validName, validEmail } from "./provider.js";
 const formulario = document.querySelector('#btn-create');
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#password');
-let accounts = [];
 let registerAccount;
 
 formulario.addEventListener('click', create);
-
-document.addEventListener('DOMContentLoaded', () => {
-  accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-});
 
 // create account functionality
 function create() {
@@ -23,7 +19,7 @@ function create() {
     return;
   }
 
-  if (email.name === 'email' && !validEmail(email.value)) {
+  if (!validEmail(email.value)) {
     showError('Your email invalid');
     return;
   }
@@ -32,8 +28,10 @@ function create() {
     showError('your password must be at least 6 characters');
     return;
   }
+  accountCreated()
+}
 
-
+async function accountCreated() {
   let account = {
     name: name.value,
     email: email.value,
@@ -41,41 +39,18 @@ function create() {
     avatar: "https://api.lorem.space/image/face?w=640&h=480&r=867",
   };
 
-  console.log(registerAccount);
+  registerAccount = await getUsers();
   const exist = registerAccount.some((account) => account.email === email.value);
   if(exist) {
     showError('this account with the email already exists')
     return;
   }
-  createAccount(account)
+  createUser(account);
 
   showSuccess('account successfully created');
   setTimeout(() => {
     window.location.href = 'login.html';
   }, 3000);
-}
-
-function validEmail(email) {
-  const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-  const res = regex.test(email);
-  return res;
-}
-
-function validName(name) {
-  const regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
-  const res = regex.test(name);
-  return res;
-}
-
-function checkFields(inputArrays) {
-  inputArrays.forEach((input) => {
-    if (input.value.trim() === '') {
-      console.log(`El ${input.value} field is required`);
-      showError(`El ${input.value} field is required`);
-    } else {
-      console.log('success');
-    }
-  });
 }
 
 function showError(message) {
@@ -100,43 +75,8 @@ function showSuccess(message) {
   const form = document.querySelector('#form');
 
   const success = document.createElement('p');
-  success.classList.add('email', 'success')
+  success.classList.add('email', 'success');
   success.textContent = message;
 
-  form.appendChild(success)
-}
-
-async function createAccount(account) {
-
-  let url = 'https://api.escuelajs.co/api/v1/users/';
-  let data = account;
-
-  let res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  if (res.ok) {
-    let ret = await res.json();
-    console.log(JSON.parse(ret.data));
-  } else {
-    console.log(`HTTP error: ${res.status}`);
-  }
-}
-
-async function getData() {
-  const res = await fetch('https://api.escuelajs.co/api/v1/users');
-  const data = await res.json();
-  return data;
-}
-
-getData().then(data => {
-  userList(data);
-})
-
-function userList(data) {
-  registerAccount = data;
-  console.log(registerAccount);
+  form.appendChild(success);
 }
