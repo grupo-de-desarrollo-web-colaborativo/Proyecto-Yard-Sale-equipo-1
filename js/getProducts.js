@@ -218,7 +218,7 @@ function getCategory(categoryName) {
       `; 
       productsList.innerHTML = showCategory;
     }
-
+    productsList.innerHTML = "";
     let showCategory = `
       ${category.map(product => `
         <div class="card">
