@@ -1,3 +1,5 @@
+import { getUsers } from "./provider.js";
+
 //función de expresión que agrega o quita la clase hidden a un elemento de html en específico.//
 const toggleOpenClose = (icon) => {
   icon.classList.toggle('hidden');
@@ -18,6 +20,7 @@ const form = document.querySelector('#loginForm');
 const email = document.querySelector('#loginEmail');
 const pass = document.querySelector('#loginPassword');
 let registerAccount;
+let userAccount;
 
 cartIcon.addEventListener('click', () => {
   toggleOpenClose(checkout);
@@ -31,35 +34,27 @@ form.addEventListener('submit', logIn);
 // Login Functionality
 function logIn(e) {
   e.preventDefault();
+  checkLogIn();
+}
+
+async function checkLogIn() {
+  registerAccount = await getUsers();
   const exist = registerAccount.some((account) => account.email === email.value && account.password === pass.value);
 
   if (exist) {
     const userAc = registerAccount.filter(item => item.email === email.value && item.password === pass.value)
-    console.log('Login pass');
     let user = userAc[0];
-    const userAccount = JSON.stringify(user);
-    localStorage.setItem('user', userAccount);
+    addLocalStorage(user);
     window.location.href = 'index.html';
   } else {
     showError('There was a problem logging in. Check your email and password or create an account.');
-    // email.value = '';
-    // pass.value = '';
   }
 }
 
-async function getData() {
-  const res = await fetch('https://api.escuelajs.co/api/v1/users');
-  const data = await res.json();
-  return data;
-}
-
-getData().then(data => {
-  userList(data);
-})
-
-function userList(data) {
-  registerAccount = data;
-  console.log(registerAccount);
+function addLocalStorage(user) {
+  userAccount = JSON.stringify(user);
+  console.log(userAccount);
+  localStorage.setItem('user', userAccount);
 }
 
 function showError(message) {

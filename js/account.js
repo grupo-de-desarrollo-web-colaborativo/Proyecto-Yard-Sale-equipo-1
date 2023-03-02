@@ -1,3 +1,5 @@
+import { getUser } from "./provider.js";
+
 const contenido = document.querySelector('.contenido');
 let id;
 let user;
@@ -5,31 +7,19 @@ let user;
 user = JSON.parse(localStorage.getItem('user'));
 id = user.id;
 
-const API = `https://api.escuelajs.co/api/v1/users`;
-
-const getUser = async(id) => {
-  const response = await fetch(`${ API}/${ id }`);
-  const data = await response.json();
-  return data;
-}
-
 async function printUser() {
   try {
     user = await getUser(id);
     const { name, email, password } = user;
-    let pass = '';
-    for (let index = 0; index < password.length; index++) {
-      pass += '*'
-    }
     let account = `
       <div class="Email">
         <p>My account</p>
         <p>Name</p>
-        <p>${name}</p>
+        <input type="text" value="${name}">
         <p>Email address</p>
-        <p>${email}</p>
+         <input type="text" value="${email}">
         <p>Passsword</p>
-        <p type="password">${pass}</p>
+        <input type="password" value="${password}">
       </div>
       <div class="button">
         <button>Edit</button>
@@ -52,7 +42,3 @@ function editUser() {
 document.addEventListener('DOMContentLoaded', () => {
   printUser();
 })
-
-export {
-  getUser,
-}
