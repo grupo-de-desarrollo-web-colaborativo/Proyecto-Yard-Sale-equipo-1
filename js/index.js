@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function userSession(user) {
+  const { id, name, email } = user;
   const headerDerecha = document.querySelector('.header_derecha');
 
   const active = document.querySelector('#signIn')
@@ -47,7 +48,7 @@ function userSession(user) {
   const txtEmail = document.querySelector('.header_derecha button')
   txtEmail.addEventListener('click', showSignOut)
 
-  txtEmail.textContent = user.email;
+  txtEmail.textContent = email;
   const signOutBtn = document.querySelector('.menu-signIn__item--primary-color')
   signOutBtn.addEventListener('click', signOut);
 }

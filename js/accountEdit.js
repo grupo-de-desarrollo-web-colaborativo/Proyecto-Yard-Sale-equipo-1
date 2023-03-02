@@ -67,8 +67,9 @@ async function updatedUser() {
     avatar: "https://api.lorem.space/image/face?w=640&h=480&r=867",
   }
   console.log(userForm);
-  const userUpdated = await updateUser(id, userForm);
-  console.log(userUpdated);
+  // const userUpdated = await updateUser(id, userForm);
+  await updateUser(id, userForm);
+  // console.log(userUpdated);
   showSuccess('account successfully updated')
   setTimeout(() => {
     window.location.href = 'index.html';

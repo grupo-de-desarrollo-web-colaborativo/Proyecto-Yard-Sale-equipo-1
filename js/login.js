@@ -20,6 +20,7 @@ const form = document.querySelector('#loginForm');
 const email = document.querySelector('#loginEmail');
 const pass = document.querySelector('#loginPassword');
 let registerAccount;
+let userAccount;
 
 cartIcon.addEventListener('click', () => {
   toggleOpenClose(checkout);
@@ -42,14 +43,18 @@ async function checkLogIn() {
 
   if (exist) {
     const userAc = registerAccount.filter(item => item.email === email.value && item.password === pass.value)
-    console.log('Login pass');
     let user = userAc[0];
-    const userAccount = JSON.stringify(user);
-    localStorage.setItem('user', userAccount);
+    addLocalStorage(user);
     window.location.href = 'index.html';
   } else {
     showError('There was a problem logging in. Check your email and password or create an account.');
   }
+}
+
+function addLocalStorage(user) {
+  userAccount = JSON.stringify(user);
+  console.log(userAccount);
+  localStorage.setItem('user', userAccount);
 }
 
 function showError(message) {
