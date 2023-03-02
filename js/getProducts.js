@@ -238,3 +238,10 @@ function getCategory(categoryName) {
   console.log(category);
   listenersProducts();
 }
+
+const account = document.querySelectorAll('.menu-signIn__item a')[1]
+account.addEventListener('click', showAccount)
+
+function showAccount() {
+  console.log('click');
+}
