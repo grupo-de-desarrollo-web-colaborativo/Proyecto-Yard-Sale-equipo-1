@@ -10,37 +10,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles_header.css">
   <link rel="stylesheet" href="./css/styles_my_account.css">
+  <link rel="stylesheet" href="./css/styles_tablet-desktop.css">
   <title>Yard Sale</title>
 </head>
 
 <body>
   <div class="contenedor_contenido">
-    <header>
-      <div class="contenedor_logo_header">
-        <div class="logo_header">
-          <img src="./Images/logo_yard_sale.svg" alt="logo_yard_sale">
-        </div>
+    <header class="header">                             
+      <div class="header_izquierda">
+          <div class="logo_header">
+              <a href="./pagina_construccion.html"><img src="./assets/icons/icon_menu.svg" alt="icono_menu"></a>
+              <a href="./login.html"><img src="./assets/logos/logo_yard_sale.svg" alt="logo_yard_sale"></a>
+          </div>                                      
+          <nav class="barra_navegacion">               
+              <ul>
+                  <li><a href="./">All</a></li>
+                  <li><a href="./pagina_construccion.html">Clothes</a></li>
+                  <li><a href="./pagina_construccion.html">Electronis</a></li>
+                  <li><a href="./pagina_construccion.html">Furniture</a></li>
+                  <li><a href="./pagina_construccion.html">Toys</a></li>
+                  <li><a href="./pagina_construccion.html">Others</a></li>
+              </ul>
+              <img src="./assets/logos/logo_yard_sale.svg" alt="logo_yard_sale">  
+          </nav> 
       </div>
-      <div class="contenedor_barra_navegacion">
-        <nav class="barra_navegacion">
-          <ul>
-            <li>All</li>
-            <li>Clothes</li>
-            <li>Electronics</li>
-            <li>Furniture</li>
-            <li>Toys</li>
-            <li>Others</li>
-          </ul>
-        </nav>
-        <div class="carrito_compra">
+      <div class="header_derecha">
           <a href="./login.html"><button>Sign In</button></a>
-          <a href="./"><img src="./Images/icon_shopping_cart.svg" alt="carrito_compras"></a>
-          <div class="carrito_compra_punto"></div>
-        </div>
-      </div>
-    </header>
+          <a href="./pagina_construccion.html"><img src="./assets/icons/icon_shopping_cart.svg" alt="carrito_compras"></a>
+          <div class="carrito_compra_punto"></div>                
+      </div>             
+  </header>   
     <main class="contenido">
-      <!-- <div class="Email">
+      <div class="Email">
         <p>My account</p>
         <p>Name</p>
         <input type="text" value="Camila Tokoo">
@@ -51,7 +52,7 @@
       </div>
       <div class="button">
         <button>Edit</button>
-      </div> -->
+      </div>
     </main>
   </div>
   <script type="module" src="./js/account.js"></script>
