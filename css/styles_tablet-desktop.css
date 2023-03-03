@@ -11,7 +11,7 @@
   }
 
   .barra_navegacion ul {  
-    display: inline-flex;             
+    display: flex;             
   }
   
   .barra_navegacion img {
@@ -35,10 +35,7 @@
   }
   .titulo img {
     display: none;
-  }
-  .button button {
-    margin-top: 35px;
-  }
+  } 
 
   /* categories mobile */
   .categories-mobile {
