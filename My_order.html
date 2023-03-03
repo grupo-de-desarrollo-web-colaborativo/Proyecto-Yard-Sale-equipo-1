@@ -1,122 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/estilosGlobales.css">
-        <link rel="stylesheet" href="./css/My_order.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <title>My_order</title>
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilosGlobales.css">
+  <link rel="stylesheet" href="./css/My_order.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <title>My_order</title>
+</head>
+
 <body>
 
-    <main>
-        <article class="headerAside">
-            
-            <p class="textoHeader">My Order</p>
-                
-        </article>
+  <main>
+    <article class="headerAside">
 
-        <article class="CajaPrecio">
+      <p class="textoHeader">My Order</p>
 
-            <div class="SubCajaPrecio">
+    </article>
 
-                <p class="PriceItem">04.25.2021</p>
-                <p class="TextItem">6 articles</p>
+    <article class="CajaPrecio" id="priceContainer">
 
-            </div>
+      <div class="SubCajaPrecio">
 
-            <p class="textPriceBox">$ 140.00</p>
+        <p class="PriceItem" id="date">04.25.2021</p>
+        <p class="TextItem">6 articles</p>
 
-        </article>
+      </div>
 
-        <article class="ItemList">
+      <p class="textPriceBox" id="totalPrice">$ 0</p>
 
-            <div class="Item" >
+    </article>
 
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
+    <article class="ItemList" id="cardsContainer">
 
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
+      <!-- <div class="Item">
 
-               
+        <div class="CajitaFoto">
+          <img class="image"
+            src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="">
+        </div>
 
-            </div>
-
-            <div class="Item" >
-
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
-
-               
-
-            </div>
-
-            <div class="Item" >
-
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
-
-               
-
-            </div>
-
-            <div class="Item" >
-
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
-
-               
-
-            </div>
-
-            <div class="Item responsive" >
-
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
-
-               
-
-            </div>
-
-            <div class="Item responsive" >
-
-                <div class="CajitaFoto">
-                    <img class="image" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-
-                <p class="TextItem">Round shelf</p>
-                <p class="PriceItem">$ 120,00</p>
-
-               
-
-            </div>
-            
-        </article>
+        <p class="TextItem">Round shelf</p>
+        <p class="PriceItem">$ 120,00</p>
 
 
-</main>
-    
+
+      </div> -->
+
+    </article>
+
+  </main>
+  <script  src="./js/getProducts.js"></script>
+  <script  src="./js/myOrder.js"></script>
 </body>
+
 </html>

@@ -15,10 +15,10 @@ closeCategories.addEventListener('click', () => toggleOpenClose(menuCategories))
 //Shopping cart toggle menu desktop
 const checkout = document.querySelector('#checkout');
 const cartIcon = document.querySelector('#shoppingCartIcon');
+const arrowLeft = document.querySelector('#arrowLeft');
 
-cartIcon.addEventListener('click', () => {
-  toggleOpenClose(checkout);
-});
+cartIcon.addEventListener('click', () => toggleOpenClose(checkout));
+arrowLeft.addEventListener('click', () => toggleOpenClose(checkout));
 
 // función de abrir el menu de email en desktop
 const signIn = document.querySelector('#signIn');

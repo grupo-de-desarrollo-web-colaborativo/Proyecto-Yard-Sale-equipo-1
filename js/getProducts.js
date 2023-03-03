@@ -42,8 +42,7 @@ async function printProducts() {
               <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" id="${product.id}" />
           </div>
       </div>
-    `).slice(0,10).join('')}
-    `; 
+    `).slice(0,10).join('')}`; 
     productsList.innerHTML = card;
   } catch(error) {
     console.log(error);
@@ -85,7 +84,6 @@ console.log(productsArray);
 function showDetails(e) {
   let imageId = parseInt(e.target.id);
   let findProduct = productsArray.find((product) => product.id == imageId);
-  console.log(findProduct);
 
   let detailsContent = `
         <div class="product-details__close-icon-container" id="detailsClose">
@@ -140,7 +138,8 @@ function addToCart(e) {
   countProducts();
   pricesArray.push(currentProduct.price);
   calculateTotalPrice();
-
+  localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+  localStorage.setItem('priceProducts', JSON.stringify(pricesArray));
   deleteIcons = document.querySelectorAll(".delete-icon");
   deleteIcons = [...deleteIcons];
   deleteIcons.forEach((item) => {
@@ -239,9 +238,37 @@ function getCategory(categoryName) {
   listenersProducts();
 }
 
-const account = document.querySelectorAll('.menu-signIn__item a')[1]
-account.addEventListener('click', showAccount)
 
-function showAccount() {
-  console.log('click');
+const inputSearch = document.querySelector('#inputSearch');
+inputSearch.addEventListener('input', searchProduct);
+
+function searchProduct(e) {
+  const searchingProduct = e.target.value.toLowerCase();
+
+  const filterProducts = productsArray.filter(item => item.title.toLowerCase().includes(searchingProduct));
+  
+  if(filterProducts) {
+    productsList.innerHTML = "";
+
+    let card = `
+      <div class="card">
+        <img src="${filterProducts[0].images[0]}" alt="${filterProducts[0].title}" class="card__images productImage" id="${filterProducts[0].id}" />
+          <div class="card__content">
+            <div class="card__description">
+              <p class="card__price">$ ${filterProducts[0].price}</p>
+              <p class="card__text" data-id="1">${filterProducts[0].title}</p>
+            </div>
+              <img src="./assets/icons/bt_add_to_cart.svg" alt="" class="iconAdd" id="${filterProducts[0].id}" />
+          </div>
+      </div>
+    `; 
+    productsList.innerHTML = card;
+  }
+  listenersProducts();
 }
+  
+const priceContainer = document.querySelector('#priceContainer');
+const checkoutButton = document.querySelector('#checkoutButton');
+// checkoutButton.addEventListener('click', myOrderContent);
+
+
