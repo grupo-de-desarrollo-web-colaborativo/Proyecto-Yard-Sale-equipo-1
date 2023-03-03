@@ -13,6 +13,9 @@
   .barra_navegacion ul {  
     display: flex;             
   }
+  .barra_navegacion ul li:hover {  
+    cursor: pointer;           
+  }
   
   .barra_navegacion img {
     display: none;
