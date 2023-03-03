@@ -45,7 +45,7 @@
     <div class="products">
       <div class="search">
         <img src="./assets/icons/magnifying_glass.png" alt="" class="search__logo" />
-        <input class="search__input" type="search" name="" id="" placeholder="Search product" />
+        <input class="search__input" type="search" name="" id="inputSearch" placeholder="Search product" />
       </div>
       <div class="product__nav">
         <ul class="nav__list nav__list--categories">
@@ -100,7 +100,7 @@
   <!-- menu de sign in desktop     -->
   <div class="hidden menu-signIn" id="menuSignIn">
     <ul>
-      <li class="menu-signIn__item"><a href="">My orders</a></li>
+      <li class="menu-signIn__item"><a href="./My_order.html">My orders</a></li>
       <li class="menu-signIn__item"><a href="./my_account.html">My account</a></li>
     </ul>
 
@@ -110,7 +110,7 @@
   <!-- checkout  -->
   <div class="shopping-cart hidden" id="checkout">
     <div class="shopping-cart__title-container">
-      <a href="./My_order.html"><span class="shopping-cart__arrow-left"></span></a>
+      <span class="shopping-cart__arrow-left" id="arrowLeft"></span>
       <h3 class="shopping-cart__title">Shopping cart</h3>
     </div>
 
@@ -134,7 +134,7 @@
         <p id="totalPrice">$ 0</p>
       </div>
 
-      <input class="primary-button" value="Checkout" type="submit" />
+      <a href="./My_order.html"><input id="checkoutButton" class="primary-button" value="Checkout" type="submit" /></a>
     </div>
   </div>
 
